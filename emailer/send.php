@@ -14,7 +14,8 @@
         
 try {
 
-    $mail->AddAddress('matt.t.ford@gmail.com');
+    // $mail->AddAddress('matt.t.ford@gmail.com');
+    $mail->AddAddress('ht@litmustest.com');
    
     $body = file_get_contents('index.html');
 
@@ -25,7 +26,7 @@ try {
     $mail->Password = '0phzsVf8hOEKpGcVkhWuBw';
     $mail->From     = 'au_donotreply@h-t.com.au';
     $mail->FromName = 'H&T EDM Preview';
-    $mail->Subject  = "HUMIRA Ulcerative Colitis PBS announcement";
+    $mail->Subject  = "Tolmar test";
     $mail->Body     = $body;
     // $mail->SMTPDebug = 1;
     var_dump($mail->send());
