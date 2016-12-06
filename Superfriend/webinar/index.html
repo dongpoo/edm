@@ -1,0 +1,609 @@
+<!doctype html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>SuperFriend Webinar</title>
+    <style>
+      /* -------------------------------------
+          GLOBAL RESETS
+      ------------------------------------- */
+      img {
+        border: none;
+        -ms-interpolation-mode: bicubic;
+        max-width: 100%; }
+
+      body {
+        background-color: #f2f2f2;
+        font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+        -webkit-font-smoothing: antialiased;
+        font-size: 14px;
+        line-height: 1.4;
+        margin: 0;
+        padding: 0; 
+        -ms-text-size-adjust: 100%;
+        -webkit-text-size-adjust: 100%; }
+
+      table {
+        border-collapse: separate;
+        mso-table-lspace: 0pt;
+        mso-table-rspace: 0pt;
+        width: 100%; }
+        table td {
+          font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+          font-size: 14px;
+          vertical-align: top; }
+
+      /* -------------------------------------
+          BODY & CONTAINER
+      ------------------------------------- */
+
+      .body {
+        background-color: #f2f2f2;
+        width: 100%; }
+
+      /* Set a max-width, and make it display as block so it will automatically stretch to that width, but will also shrink down on a phone or something */
+      .container {
+        display: block;
+        Margin: 0 auto !important;
+        /* makes it centered */
+        max-width: 668px;
+        padding: 10px;
+        width: auto !important;
+        width: 668px; }
+
+      /* This should also be a block element, so that it will fill 100% of the .container */
+      .content {
+        box-sizing: border-box;
+        display: block;
+        Margin: 0 auto;
+        max-width: 668px;
+        padding: 10px; }
+
+      /* -------------------------------------
+          HEADER, FOOTER, MAIN
+      ------------------------------------- */
+      .main {
+        background: #fff;
+        border-radius: 3px;
+        width: 100%; }
+
+      .wrapper {
+        box-sizing: border-box;
+        padding: 0px 20px 0px 20px; }
+
+      .footer {
+        clear: both;
+        padding-top: 10px;
+        text-align: center;
+        width: 100%; }
+        .footer td,
+        .footer p,
+        .footer span,
+        .footer a {
+          color: #999999;
+          font-size: 12px;
+          text-align: center; }
+
+      /* -------------------------------------
+          TYPOGRAPHY
+      ------------------------------------- */
+      h1,
+      h2,
+      h3,
+      h4 {
+        color: #000000;
+        font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+        font-weight: 400;
+        line-height: 1.4;
+        margin: 0;
+        Margin-bottom: 30px; }
+
+      h1 {
+        font-size: 35px;
+        font-weight: 300;
+        text-align: center;
+        text-transform: capitalize; }
+
+      p,
+      ul,
+      ol {
+        font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+        font-size: 14px;
+        font-weight: normal;
+        margin: 0;
+        Margin-bottom: 15px; }
+        p li,
+        ul li,
+        ol li {
+          list-style-position: inside;
+          margin-left: 5px; }
+
+      a {
+        color: #3498db;
+        text-decoration: underline; }
+
+      /* -------------------------------------
+          BUTTONS
+      ------------------------------------- */
+      .btn {
+        box-sizing: border-box;
+        width: 100%; }
+        .btn > tbody > tr > td {
+          padding-bottom: 15px; }
+        .btn table {
+          width: auto; }
+        .btn table td {
+          background-color: #ffffff;
+          border-radius: 5px;
+          text-align: center; }
+        .btn a {
+          background-color: #ffffff;
+          border: solid 1px #3498db;
+          border-radius: 5px;
+          box-sizing: border-box;
+          color: #3498db;
+          cursor: pointer;
+          display: inline-block;
+          font-size: 14px;
+          font-weight: bold;
+          margin: 0;
+          padding: 12px 25px;
+          text-decoration: none;
+          text-transform: capitalize; }
+
+      .btn-primary table td {
+        background-color: #3498db; }
+
+      .btn-primary a {
+        background-color: #3498db;
+        border-color: #3498db;
+        color: #ffffff; }
+
+      /* -------------------------------------
+          OTHER STYLES THAT MIGHT BE USEFUL
+      ------------------------------------- */
+      .last {
+        margin-bottom: 0; }
+
+      .first {
+        margin-top: 0; }
+
+      .align-center {
+        text-align: center; }
+
+      .align-right {
+        text-align: right; }
+
+      .align-left {
+        text-align: left; }
+
+      .clear {
+        clear: both; }
+
+      .mt0 {
+        margin-top: 0; }
+
+      .mb0 {
+        margin-bottom: 0; }
+
+      .preheader {
+        color: transparent;
+        display: none;
+        height: 0;
+        max-height: 0;
+        max-width: 0;
+        opacity: 0;
+        overflow: hidden;
+        mso-hide: all;
+        visibility: hidden;
+        width: 0; }
+
+      .powered-by a {
+        text-decoration: none; }
+
+      hr {
+        border: 0;
+        border-bottom: 1px solid #d5df5a;
+        Margin: 20px 0; }
+
+    
+
+      /* -------------------------------------
+          RESPONSIVE AND MOBILE FRIENDLY STYLES
+      ------------------------------------- */
+      @media only screen and (max-width: 620px) {
+
+        table[class=body] h1 {
+          font-size: 28px !important;
+          margin-bottom: 10px !important; }
+        table[class=body] p,
+        table[class=body] ul,
+        table[class=body] ol,
+        table[class=body] td,
+        table[class=body] span,
+        table[class=body] a {
+          font-size: 16px !important; }
+        table[class=body] .wrapper,
+        table[class=body] .article {
+          padding: 10px !important; }
+        table[class=body] .content {
+          padding: 0 !important; }
+        table[class=body] .container {
+          padding: 0 !important;
+          width: 100% !important; }
+        table[class=body] .main {
+          border-left-width: 0 !important;
+          border-radius: 0 !important;
+          border-right-width: 0 !important; }
+        table[class=body] .btn table {
+          width: 100% !important; }
+        table[class=body] .btn a {
+          width: 100% !important; }
+        table[class=body] .img-responsive {
+          height: auto !important;
+          max-width: 100% !important;
+          width: auto !important; }}
+
+      /* -------------------------------------
+          PRESERVE THESE STYLES IN THE HEAD
+      ------------------------------------- */
+      @media all {
+        .ExternalClass {
+          width: 100%; }
+        .ExternalClass,
+        .ExternalClass p,
+        .ExternalClass span,
+        .ExternalClass font,
+        .ExternalClass td,
+        .ExternalClass div {
+          line-height: 100%; }
+        .apple-link a {
+          color: inherit !important;
+          font-family: inherit !important;
+          font-size: inherit !important;
+          font-weight: inherit !important;
+          line-height: inherit !important;
+          text-decoration: none !important; } 
+        .btn-primary table td:hover {
+          background-color: #34495e !important; }
+        .btn-primary a:hover {
+          background-color: #34495e !important;
+          border-color: #34495e !important; } }
+
+    </style>
+
+<style type="text/css">
+    @media only screen and (max-width: 480px){
+        #templateColumns{
+            width:100% !important;
+        }
+
+        #padding-fix {
+          padding-left: 15px !important;
+        }
+
+        .templateColumnContainer{
+            display:block !important;
+            width:100% !important;
+        }
+
+        .columnImage{
+            height:auto !important;
+            max-width:480px !important;
+            width:100% !important;
+        }
+
+        .leftColumnContent{
+            font-size:16px !important;
+            line-height:125% !important;
+        }
+
+        .rightColumnContent{
+            font-size:16px !important;
+            line-height:125% !important;
+        }
+
+        #padding-fix {
+
+          padding-left: 0px !important;
+
+        }
+
+        #header-fix {
+
+          font-size: 12px !important;
+
+        }
+
+        #anchor-fix {
+
+          font-size: 12px !important;
+
+        }
+    }
+</style>
+
+  </head>
+  <body class="">
+    <table border="0" cellpadding="0" cellspacing="0" class="body">
+      <tr>
+        <td>&nbsp;</td>
+        <td class="container">
+          <div class="content">
+  
+            <!-- START CENTERED WHITE CONTAINER -->
+            <table class="main" cellspacing="0" cellpadding="0">
+              <tr>
+                <td>
+                  <table cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td id="header-fix" style="background-color: #f2f2f2; font-size: 12px; color: #8b8b8b">9th November</td>
+                      <td style="background-color: #f2f2f2; font-size: 12px; text-align: right;"><a id="anchor-fix" style="color: #8b8b8b" href="http://handtpreview.com/superfriend/webinar/index.html">View in Browser</a></td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <tr><td class="wrapper spacer" style="background-color: #f2f2f2;">&nbsp;</td></tr>
+              <tr>
+                <td><img src="https://s3-ap-southeast-2.amazonaws.com/edm-img/SUP0346/hero.jpg" /></td>
+              </tr>
+              <!-- START MAIN CONTENT AREA -->
+
+              <tr><td class="wrapper spacer">&nbsp;</td></tr>
+
+              <tr>
+                <td class="wrapper" style="margin-bottom: 20px">
+                  <table border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td style="background-color: #1c5692; padding-top: 5px; padding-bottom: 5px; text-align: center">
+                        <img class="img-responsive topic" src="http://handtpreview.com/superfriend/webinar/img/h-topic2.jpg" /> 
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="padding: 20px 0 20px 0;">
+                      <p>This webinar will provide an overview of practical strategies that can be implemented into your work and personal life to promote good mental health and wellbeing. Strategies will be outlined by walking though the New Economic Foundation’s evidence based model “The Five Ways to Wellbeing.”<p>
+                      <p>Adopting the “Five Ways to Wellbeing’’ can help prevent mental health problems and boost your ability to bounce back during tough times. It has the potential to improve your concentration, productivity, quality of sleep and ability to manage stress more effectively.</p>
+                      <p>The webinar will conclude with a brief Q&amp;A session.</p>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+
+              <tr>
+                <td class="wrapper">
+                  <table border="0" cellpadding="0" cellspacing="0">
+
+                    <tr>
+                      <td colspan="2" style="background-color: #1c5692; padding-top: 5px; padding-bottom: 5px; text-align: center">
+                        <img class="img-responsive topic" src="https://s3-ap-southeast-2.amazonaws.com/edm-img/SUP0346/h-presenter.jpg" /> 
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="padding-top: 10px;" align="center" valign="top" class="templateColumnContainer">
+                          <table id="" border="0" cellpadding="0" cellspacing="0" width="100%" style="padding-top: 15px;">
+                              <tr>
+                                  <td valign="top" align="center" style="text-align: center;">
+                                      <h3 style="margin-bottom: 5px; text-align: center;"><strong>Dr Laura Kirby Director &amp; Principal Psychologist – CommuniCorp Group</strong></h3>
+                                  </td>
+                              </tr>
+                          </table>
+                      </td>
+                    </tr>
+                    
+                    <tr>
+                      <td align="center" valign="top" class="templateColumnContainer">
+                            <table border="0" cellspacing="0" width="100%">
+                              <tr>
+                                  <td width="100%" style="padding: 20px 0;" class="leftColumnContent">
+                                      <img width="608" style="width: 608px;" src="http://h-t.com.au/email/superfriend/webinar/kirby.jpg"  class="columnImage" />
+                                  </td>
+                              </tr>
+                              
+                          </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+
+              <tr>
+                <td class="wrapper">
+                  <table border="0" cellpadding="0" cellspacing="0">
+
+                    <tr>
+                      <td>
+                          <p style="font-size: 14px; line-height:19px;">Dr Laura Kirby is a Director and Principal Psychologist of CommuniCorp Group, and has extensive experience in workplace training, organisational development and workplace wellbeing initiatives, across a range of organisations and sectors.</p>
+                          <p style="font-size: 14px; line-height:19px;">Laura specialises in a wide range of workplace and professional capabilities including resilience, wellbeing, workplace psychological health and interpersonal capability. With a background in organisational psychology and mental health, Laura has developed her expertise in researching, assessing and understanding stress and psychological health and engaging appropriate intervention and prevention strategies for individuals, teams and the broader organisation. </p>
+                           
+                          <p style="font-size: 14px; line-height:19px;">In her role at CommuniCorp Laura also manages large-scale and national programs for a broad range of private and public sector organisations. Laura focusses on the development and delivery of evidence-based, practical and engaging training and organisational development solutions.</p>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+
+              <tr><td class="wrapper spacer">&nbsp;</td></tr>             
+
+              <tr>
+                <td class="wrapper" style="padding-bottom: 0px">
+                  <table border="0" cellpadding="0" cellspacing="0">    
+                    <tr>
+                      <td style="background-color: #1c5692; padding-top: 5px; padding-bottom: 5px; text-align: center">
+                        <img class="img-responsive topic" src="https://s3-ap-southeast-2.amazonaws.com/edm-img/SUP0346/h-date.jpg" /> 
+                      </td>
+                      <td>&nbsp;</td>
+                      <td style="background-color: #1c5692; padding-bottom: 5px; padding-top: 5px; text-align: center">
+                        <img class="img-responsive topic" src="https://s3-ap-southeast-2.amazonaws.com/edm-img/SUP0346/h-time.jpg" /> 
+                      </td>                   
+                    </tr>
+                    <tr>
+                      <td style="text-align: center; padding: 10px; width: 50%; background-color: #F7F7F7; font-size: 18px;"><strong>Wednesday 7th December 2016</strong></td>
+                      <td>&nbsp;</td>
+                      <td style="text-align: center; padding: 10px; background-color: #F7F7F7; font-size: 18px;"><strong>12.00 - 1.00pm AEST</strong></td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+
+              <tr>
+                <td class="wrapper">
+                    <table border="0" cellpadding="0" cellspacing="0">    
+                      <tr>
+                        <td style="padding: 20px 20px 0 0; font-size: 18px;">
+                          To register for this free event please <a href="https://attendee.gotowebinar.com/register/1506501732781436676">click here</a>.
+                        </td>
+                      </tr>
+                    </table>
+                </td>
+              </tr>
+
+              <tr><td style="padding: 10px 20px 10px 20px;"><hr style="border-color: #d5df5a;" /></td></tr>
+
+              <tr>
+                <td class="wrapper" style="padding-top: 0px;">
+                  <table border="0" cellpadding="0" cellspacing="0">    
+                    <tr>
+                     <td>
+                     <p style="font-size: 12px;">
+                        SuperFriend - IFF Mental Health Foundation<br/>
+                        P: (03) 9615 8661<br/>
+                        E: <a href="mailto:programs@superfriend.com.au">programs@superfriend.com.au</a>
+                     </p>
+                     </td> 
+                    </tr>
+                                        
+                    <tr><td class="wrapper spacer">&nbsp;</td></tr>
+
+                  </table>
+                </td>
+              </tr>
+
+
+              <!-- END MAIN CONTENT AREA -->
+              </table>
+
+            <div class="footer" style="padding-bottom: 50px;">
+              <table border="0" cellpadding="0" cellspacing="0">
+
+                <tr><td class="wrapper spacer">&nbsp;</td></tr>             
+                <tr><td class="wrapper spacer">&nbsp;</td></tr>                             
+                
+                <tr>
+                  <td class="content-block">
+                    <img src="https://s3-ap-southeast-2.amazonaws.com/edm-img/SUP0346/footer-logo.jpg" />
+                  </td>
+                </tr>
+              
+                <tr><td class="wrapper spacer">&nbsp;</td></tr>
+
+                <tr>
+                  <td class="wrapper">
+                    <table border="0" cellpadding="0" cellspacing="0">
+                      
+                      <tr>
+                        <td align="center" valign="top" width="30%" class="templateColumnContainer">
+                              <table border="0" cellspacing="0" width="100%">
+                                <tr>
+                                    <td style="padding-top: 0px;" class="firstColumnContent">
+                                      <a href="mailto:programs@superfriend.com.au"><img src="https://s3-ap-southeast-2.amazonaws.com/edm-img/SUP0346/f-email.jpg" /></a>
+                                    </td>
+                                </tr>
+                                
+                            </table>
+                        </td>
+                        <td align="center" valign="top" width="15%" class="templateColumnContainer">
+                              <table border="0" cellspacing="0" width="100%">
+                                <tr>
+                                    <td style="padding-top: 0px;" class="secondColumnContent">
+                                      <img src="https://s3-ap-southeast-2.amazonaws.com/edm-img/SUP0346/f-phone.jpg" /> 
+                                    </td>
+                                </tr>
+                                
+                            </table>
+                        </td>
+                        <td align="center" valign="top" width="37%" class="templateColumnContainer">
+                              <table border="0" cellspacing="0" width="100%">
+                                <tr>
+                                    <td style="padding-top: 0px;" class="secondColumnContent">
+                                      <img src="https://s3-ap-southeast-2.amazonaws.com/edm-img/SUP0346/f-address.jpg" /> 
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                
+                <tr><td class="wrapper spacer">&nbsp;</td></tr>
+                <tr><td style="height: 1px; background-color: #1c5692;"></td></tr>
+                <tr><td class="wrapper spacer">&nbsp;</td></tr>
+    
+                <tr>
+                  <td class="wrapper">
+                    <table border="0" cellpadding="0" cellspacing="0">
+                      
+                      <tr>
+                        <td align="center" valign="top" width="25%" class="templateColumnContainer">
+                              <table border="0" cellspacing="0" width="100%">
+                                <tr>
+                                    <td style="padding-top: 0px;" class="firstColumnContent">
+                                      <a href="https://twitter.com/SuperFriendMHF"><img src="https://s3-ap-southeast-2.amazonaws.com/edm-img/SUP0346/f-twitter.jpg" /><a/>
+                                    </td>
+                                </tr>
+                                
+                            </table>
+                        </td>
+                        <td align="center" valign="top" width="25%" class="templateColumnContainer">
+                              <table border="0" cellspacing="0" width="100%">
+                                <tr>
+                                    <td style="padding-top: 0px;" class="secondColumnContent">
+                                      <a href="https://www.facebook.com/SuperFriendMHF"><img src="https://s3-ap-southeast-2.amazonaws.com/edm-img/SUP0346/f-facebook.jpg" /></a>
+                                    </td>
+                                </tr>
+                                
+                            </table>
+                        </td>
+                        <td align="center" valign="top" width="35%" class="templateColumnContainer">
+                              <table border="0" cellspacing="0" width="100%">
+                                <tr>
+                                    <td style="padding-top: 0px;" class="secondColumnContent">
+                                      <a href="https://linkedin.com/company/superfriend"><img src="https://s3-ap-southeast-2.amazonaws.com/edm-img/SUP0346/f-linkedin.jpg" /></a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+
+
+                <tr><td class="wrapper spacer">&nbsp;</td></tr>
+
+
+                <tr>
+                  <td class="content-block" style="padding-top: 20px;">
+                    <a href="http://superfriend.com.au"><img src="https://s3-ap-southeast-2.amazonaws.com/edm-img/SUP0346/f-logo.jpg" /></a>
+                  </td>
+                </tr>
+
+                <tr><td class="wrapper spacer">&nbsp;</td></tr>
+                <tr><td class="wrapper spacer">&nbsp;</td></tr>
+                
+
+              </table>
+            </div>
+
+            <!-- END FOOTER -->
+            
+<!-- END CENTERED WHITE CONTAINER --></div>
+        </td>
+        <td>&nbsp;</td>
+      </tr>
+    </table>
+  </body>
+</html>
+
