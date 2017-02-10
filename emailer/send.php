@@ -15,8 +15,10 @@
 try {
 
     // $mail->AddAddress('matt.t.ford@gmail.com');
+    // $mail->AddAddress('mattf@h-t.com.au');
+    // $mail->AddAddress('carol_marcos@hotmail.com');   
+
     $mail->AddAddress('ht@litmustest.com');
-   
     $body = file_get_contents('index.html');
 
     $mail->SMTPAuth = true;
@@ -26,7 +28,7 @@ try {
     $mail->Password = '0phzsVf8hOEKpGcVkhWuBw';
     $mail->From     = 'au_donotreply@h-t.com.au';
     $mail->FromName = 'H&T EDM Preview';
-    $mail->Subject  = "Tolmar test";
+    $mail->Subject  = "Kyprolis Test";
     $mail->Body     = $body;
     // $mail->SMTPDebug = 1;
     var_dump($mail->send());

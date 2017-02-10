@@ -1,670 +1,322 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-  <head>
-    <meta name="viewport" content="width=device-width" />
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>SuperFriend Webinar</title>
-    <style>
-      /* -------------------------------------
-          GLOBAL RESETS
-      ------------------------------------- */
-      img {
-        border: none;
-        -ms-interpolation-mode: bicubic;
-       /* max-width: 100%;*/ }
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>THE KNOWLEDGE PORTAL</title>
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700" rel="stylesheet" type="text/css">
+  <style type="text/css">
 
-      body {
-        background-color: #f2f2f2;
-        color: #383838;
-        font-family: arial, "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-        -webkit-font-smoothing: antialiased;
-        font-size: 14px;
-        line-height: 1.4;
-        margin: 0;
-        padding: 0; 
-        -ms-text-size-adjust: 100%;
-        -webkit-text-size-adjust: 100%; }
-
-      table {
-        border-collapse: separate;
-        mso-table-lspace: 0pt;
-        mso-table-rspace: 0pt;
-        width: 100%; }
-        table td {
-          font-family: arial, "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-          font-size: 14px;
-          vertical-align: top; }
-
-      /* -------------------------------------
-          BODY & CONTAINER
-      ------------------------------------- */
-
-      .body {
-        background-color: #f2f2f2;
-        color: #383838;
-        width: 100%; }
-
-      /* Set a max-width, and make it display as block so it will automatically stretch to that width, but will also shrink down on a phone or something */
-      .container {
-        display: block;
-        Margin: 0 auto !important;
-        /* makes it centered */
-        max-width: 668px;
-        padding: 10px;
-        width: auto !important;
-        width: 668px; }
-
-      /* This should also be a block element, so that it will fill 100% of the .container */
-      .content {
-        box-sizing: border-box;
-        display: block;
-        Margin: 0 auto;
-        max-width: 668px;
-        padding: 10px; }
-
-      /* -------------------------------------
-          HEADER, FOOTER, MAIN
-      ------------------------------------- */
-      .main {
-        background: #fff;
-        border-radius: 3px;
-        width: 100%; }
-
-      .wrapper {
-        box-sizing: border-box;
-        padding: 0px 20px 0px 20px; }
-
-      .footer {
-        clear: both;
-        padding-top: 10px;
-        text-align: center;
-        width: 100%; }
-        .footer td,
-        .footer p,
-        .footer span,
-        .footer a {
-          color: #999999;
-          font-size: 12px;
-          text-align: center; }
-
-      /* -------------------------------------
-          TYPOGRAPHY
-      ------------------------------------- */
-      h1,
-      h2,
-      h3,
-      h4 {
-        color: #000000;
-        font-family: arial, "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-        font-weight: 400;
-        line-height: 1.4;
-        margin: 0;
-        margin-bottom: 30px; }
-
-      h1 {
-        font-size: 35px;
-        font-weight: 300;
-        text-align: center;
-        text-transform: capitalize; }
-
-      p,
-      ul,
-      ol {
-        font-family: arial, "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-        font-size: 14px;
-        font-weight: normal;
-        margin: 0;
-        margin-bottom: 15px; }
-        p li,
-        ul li,
-        ol li {
-          list-style-position: inside;
-          margin-left: 5px; }
-
-      a {
-        color: #3498db;
-        text-decoration: underline; }
-
-      /* -------------------------------------
-          BUTTONS
-      ------------------------------------- */
-      .btn {
-        box-sizing: border-box;
-        width: 100%; }
-        .btn > tbody > tr > td {
-          padding-bottom: 15px; }
-        .btn table {
-          width: auto; }
-        .btn table td {
-          background-color: #ffffff;
-          border-radius: 5px;
-          text-align: center; }
-        .btn a {
-          background-color: #ffffff;
-          border: solid 1px #3498db;
-          border-radius: 5px;
-          box-sizing: border-box;
-          color: #3498db;
-          cursor: pointer;
-          display: inline-block;
-          font-size: 14px;
-          font-weight: bold;
-          margin: 0;
-          padding: 12px 25px;
-          text-decoration: none;
-          text-transform: capitalize; }
-
-      .btn-primary table td {
-        background-color: #3498db; }
-
-      .btn-primary a {
-        background-color: #3498db;
-        border-color: #3498db;
-        color: #ffffff; }
-
-      /* -------------------------------------
-          OTHER STYLES THAT MIGHT BE USEFUL
-      ------------------------------------- */
-      .last {
-        margin-bottom: 0; }
-
-      .first {
-        margin-top: 0; }
-
-      .align-center {
-        text-align: center; }
-
-      .align-right {
-        text-align: right; }
-
-      .align-left {
-        text-align: left; }
-
-      .clear {
-        clear: both; }
-
-      .mt0 {
-        margin-top: 0; }
-
-      .mb0 {
-        margin-bottom: 0; }
-
-      .preheader {
-        color: transparent;
-        display: none;
-        height: 0;
-        max-height: 0;
-        max-width: 0;
-        opacity: 0;
-        overflow: hidden;
-        mso-hide: all;
-        visibility: hidden;
-        width: 0; }
-
-      .powered-by a {
-        text-decoration: none; }
-
-      hr {
-        border: 0;
-        border-bottom: 1px solid #d5df5a;
-        Margin: 20px 0; }
-
-    
-
-      /* -------------------------------------
-          RESPONSIVE AND MOBILE FRIENDLY STYLES
-      ------------------------------------- */
-      @media only screen and (max-width: 620px) {
-
-        table[class=body] h1 {
-          font-size: 28px !important;
-          margin-bottom: 10px !important; }
-        table[class=body] p,
-        table[class=body] ul,
-        table[class=body] ol,
-        table[class=body] td,
-        table[class=body] span,
-        table[class=body] a {
-          font-size: 16px !important; }
-        table[class=body] .wrapper,
-        table[class=body] .article {
-          padding: 10px !important; }
-        table[class=body] .content {
-          padding: 0 !important; }
-        table[class=body] .container {
-          padding: 0 !important;
-           }
-        table[class=body] .main {
-          border-left-width: 0 !important;
-          border-radius: 0 !important;
-          border-right-width: 0 !important; }
-        table[class=body] .btn table {
-          width: 100% !important; }
-        table[class=body] .btn a {
-          width: 100% !important; }
-        table[class=body] .img-responsive {
-          height: auto !important;
-          
-          width: auto !important; }}
-
-      /* -------------------------------------
-          PRESERVE THESE STYLES IN THE HEAD
-      ------------------------------------- */
-      @media all {
-        .ExternalClass {
-          width: 100%; }
-        .ExternalClass,
-        .ExternalClass p,
-        .ExternalClass span,
-        .ExternalClass font,
-        .ExternalClass td,
-        .ExternalClass div {
-          line-height: 100%; }
-        .apple-link a {
-          color: inherit !important;
-          font-family: inherit !important;
-          font-size: inherit !important;
-          font-weight: inherit !important;
-          line-height: inherit !important;
-          text-decoration: none !important; } 
-        .btn-primary table td:hover {
-          background-color: #34495e !important; }
-        .btn-primary a:hover {
-          background-color: #34495e !important;
-          border-color: #34495e !important; } }
-
-    </style>
-
-<style type="text/css">
-    @media only screen and (max-width: 480px){
-        #templateColumns{
-            width:100% !important;
-        }
-
-        #padding-fix {
-          padding-left: 15px !important;
-        }
-
-        .templateColumnContainer{
-            display:block !important;
-            width:100% !important;
-        }
-
-        .columnImage{
-            height:auto !important;
-            max-width:480px !important;
-            width:100% !important;
-        }
-
-        .leftColumnContent{
-            font-size:16px !important;
-            line-height:125% !important;
-        }
-
-        .rightColumnContent{
-            font-size:16px !important;
-            line-height:125% !important;
-        }
-
-        #padding-fix {
-
-          padding-left: 0px !important;
-
-        }
-
-        #header-fix {
-
-          font-size: 12px !important;
-
-        }
-
-        #anchor-fix {
-
-          font-size: 12px !important;
-
-        }
+    body {
+      background-color: #f6f6f6;
+      margin-left: 0px;
+      margin-top: 0px;
+      margin-right: 0px;
+      margin-bottom: 0px;
+      font-family:'Open Sans Condensed', 'Helvetica Neue', Helvetica, sans-serif;
+      font-weight: 300;
+      color: #000000; 
+      font-size: 14px; 
+      line-height: 16px;
     }
-</style>
-</head>
 
-  <body class="">
-    <table border="0" cellpadding="0" cellspacing="0" class="body">
-      <tr>
-        <td>&nbsp;</td>
-        <td class="container">
-          <div class="content">
-  
-            <!-- START CENTERED WHITE CONTAINER -->
-            <table class="main" cellspacing="0" cellpadding="0">
-             
-              <tr>
-                <td>
-                  <table cellspacing="0" cellpadding="0">
-                    <tr>
-                      <td id="header-fix" style="background-color: #f2f2f2; font-size: 12px; color: #8b8b8b">11th January</td>
-                      <td style="background-color: #f2f2f2; font-size: 12px; text-align: right;"><a id="anchor-fix" style="color: #8b8b8b" href="http://h-t.com.au/email/superfriend/webinar0371/index.html">View in Browser</a></td>
-                    </tr>
-                  </table>
-                </td>
-              </tr>
-              
-              <tr><td class="wrapper spacer" style="background-color: #f2f2f2;">&nbsp;</td></tr>
-              
-              <!-- START MAIN CONTENT AREA -->
-              <tr>
-                <td><img src="https://s3-ap-southeast-2.amazonaws.com/edm-img/SUP0346/hero.jpg" /></td>
-              </tr>
+    .rightindex a, .rightindex a:visited, .rightindex a:hover, .rightindex a:focus {
+      color: #ffffff;
+    }
 
-              <tr><td class="wrapper spacer">&nbsp;</td></tr>
-
-              <tr>
-                <td class="wrapper" style="margin-bottom: 0px">
-                  <table border="0" cellpadding="0" cellspacing="0" width="608">
-                    <tr>
-                      <td style="background-color: #1c5692; text-align: center;margin: 0; padding: 0; border: 0;">
-                        <img class="" style="" width="608" src="http://h-t.com.au/email/superfriend/webinar0371/fed-jun.png" /> 
-                      </td>
-                    </tr>
-                    <tr>
-                      <td style="padding: 20px 0 10px 0;">
-                      <p>In 2017, SuperFriend will be delivering a series of webinars to support the development of mentally healthy workplaces in Australia, we are pleased to present to you the February to June calendar. For more information regarding each webinar or to register please click on the links below.</p>
-                      </td>
-                    </tr>
-                  </table>
-                </td>
-              </tr>
-
-              <tr>
-                <td class="wrapper" style="margin-bottom: 0px">
-                  <table border="0" width="608" cellpadding="0" cellspacing="0" bgcolor="#f2f2f2">
-                    <tr>
-                      <td style="background-color: #f2f2f2;">
-                        <div><img class="" border="0" width="628" style="display: block; padding: 0px; margin: 0px;"  src="http://h-t.com.au/email/superfriend/webinar0371/webinar1.png" /> </div>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td>
-                        <table width="608"><tr>
-                          <td width="10">&nbsp;</td>
-                          <td width="588" style="line-height: 20px; padding-top:8px;">
-                            <strong>Date:</strong> 22 February 2017<br/>
-                            <strong>Time:</strong> 12.00pm - 1.00pm AEST<br/>
-                            <strong>Registration:</strong> <a target="_blank" href="https://attendee.gotowebinar.com/register/8801595357860070914" style="text-decoration: none; color: #383838;">https://attendee.gotowebinar.com/register/8801595357860070914</a>
-                          </td>
-                          <td width="10">&nbsp;</td>
-                        </tr></table>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td style="padding:0; margin:0; border: none;">
-                        <img style="display: block;"  width="628" class="" src="http://h-t.com.au/email/superfriend/webinar0371/row_tail.png" /> 
-                      </td>
-                    </tr>
-                  </table>
-                </td>
-              </tr>
-
-              <tr><td class="wrapper spacer">&nbsp;</td></tr>
-
-              <tr>
-                <td class="wrapper" style="margin-bottom: 0px">
-                  <table border="0" cellpadding="0" cellspacing="0" bgcolor="#f2f2f2">
-                    <tr>
-                      <td style="background-color: #f2f2f2; text-align: center">
-                        <img style="display: block;" width="628"  class="" src="http://h-t.com.au/email/superfriend/webinar0371/webinar2.png" /> 
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <table><tr>
-                          <td width="10">&nbsp;</td>
-                          <td style="line-height: 20px; padding-top:8px;">
-                            <strong>Date:</strong> 23 March 2017<br/>
-                            <strong>Time:</strong> 12.00pm - 1.00pm AEST<br/>
-                            <strong>Registration:</strong> <a target="_blank" href="https://attendee.gotowebinar.com/register/5657366791763714" style="text-decoration: none; color: #383838;">https://attendee.gotowebinar.com/register/5657366791763714</a>
-                          </td>
-                          <td width="10">&nbsp;</td>
-                        </tr></table>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td style="padding:0; margin:0; border: none;">
-                        <img style="display: block;" width="628" class="" src="http://h-t.com.au/email/superfriend/webinar0371/row_tail.png" /> 
-                      </td>
-                    </tr>
-                  </table>
-                </td>
-              </tr>
-              <tr><td class="wrapper spacer">&nbsp;</td></tr>
-               <tr>
-                <td class="wrapper" style="margin-bottom: 0px">
-                  <table border="0" cellpadding="0" cellspacing="0" bgcolor="#f2f2f2">
-                    <tr>
-                      <td style="background-color: #f2f2f2; text-align: center">
-                        <img style="display: block;"  width="628" src="http://h-t.com.au/email/superfriend/webinar0371/webinar3.png" /> 
-                      </td>
-                    </tr>
-                    <tr>
-                     <td>
-                        <table><tr>
-                          <td width="10">&nbsp;</td>
-                          <td style="line-height: 20px; padding-top:8px;">
-                            <strong>Date:</strong> 26 April 2017<br/>
-                            <strong>Time:</strong> 12.00pm - 1.00pm AEST<br/>
-                            <strong>Registration:</strong> <a target="_blank" href="https://attendee.gotowebinar.com/register/949268141353689346" style="text-decoration: none; color: #383838;">https://attendee.gotowebinar.com/register/949268141353689346</a>
-                          </td>
-                          <td width="10">&nbsp;</td>
-                        </tr></table>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td style="padding:0; margin:0; border: none;">
-                        <img style="display: block;" width="628" class="" src="http://h-t.com.au/email/superfriend/webinar0371/row_tail.png" /> 
-                      </td>
-                    </tr>
-                  </table>
-                </td>
-              </tr>
-              <tr><td class="wrapper spacer">&nbsp;</td></tr>
-
-              <tr>
-                <td class="wrapper" style="margin-bottom: 0px">
-                  <table border="0" cellpadding="0" cellspacing="0" bgcolor="#f2f2f2">
-                    <tr>
-                      <td style="background-color: #f2f2f2; text-align: center">
-                        <img style="display: block;"  width="628" src="http://h-t.com.au/email/superfriend/webinar0371/webinar4.png" /> 
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <table><tr>
-                          <td width="10">&nbsp;</td>
-                          <td style="line-height: 20px; padding-top:8px;">
-                            <strong>Date:</strong> 23 May 2017<br/>
-                            <strong>Time:</strong> 12.00pm - 1.00pm AEST<br/>
-                            <strong>Registration:</strong> <a target="_blank" href="https://attendee.gotowebinar.com/register/5745276289061456386" style="text-decoration: none; color: #383838;">https://attendee.gotowebinar.com/register/5745276289061456386</a>
-                          </td>
-                          <td width="10">&nbsp;</td>
-                        </tr></table>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td style="padding:0; margin:0; border: none;">
-                        <img style="display: block;"  width="628"  class="" src="http://h-t.com.au/email/superfriend/webinar0371/row_tail.png" /> 
-                      </td>
-                    </tr>
-                  </table>
-                </td>
-              </tr>
-              
-              <tr><td class="wrapper spacer">&nbsp;</td></tr>
-
-              <tr>
-                <td class="wrapper" style="margin-bottom: 0px">
-                  <table border="0" cellpadding="0" cellspacing="0" bgcolor="#f2f2f2">
-                    <tr>
-                      <td style="background-color: #f2f2f2; text-align: center">
-                        <img style="display: block;"  width="628" src="http://h-t.com.au/email/superfriend/webinar0371/webinar5.png" /> 
-                      </td> 
-                    </tr>
-                    <tr>
-                     <td>
-                        <table><tr>
-                          <td width="10">&nbsp;</td>
-                          <td style="line-height: 20px; padding-top:8px;">
-                            <strong>Date:</strong> 20 June 2017<br/>
-                            <strong>Time:</strong> 12.00pm - 1.00pm AEST<br/>
-                            <strong>Registration:</strong> <a target="_blank" href="https://attendee.gotowebinar.com/register/4260467199610433026" style="text-decoration: none; color: #383838;">https://attendee.gotowebinar.com/register/4260467199610433026</a>
-                          </td>
-                         <td width="10">&nbsp;</td>
-                        </tr></table>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td style="padding:0; margin:0; border: none;">
-                        <img style="display: block;"  width="628" class="" src="http://h-t.com.au/email/superfriend/webinar0371/row_tail.png" /> 
-                      </td>
-                    </tr>
-                  </table>
-                </td>
-              </tr>
-              
-              <tr><td class="wrapper spacer">&nbsp;</td></tr>             
-              <tr><td class="wrapper spacer">&nbsp;</td></tr> 
-        
-            <!-- END MAIN CONTENT AREA -->
-            </table>
-<!--                 
-            <table class="main" cellspacing="0" cellpadding="0">
-                <tr>
-                  <td align="center" class="content-block">
-                      <img src="http://h-t.com.au/email/superfriend/webinar0371/content_table_row_tail.png"  alt="" style="display:block;" />
-                  </td>
-                </tr>
-            </table>
- -->
-            <div class="footer" style="padding-bottom: 50px;">
-              <table border="0" cellpadding="0" cellspacing="0">
-
-                <tr><td class="wrapper spacer">&nbsp;</td></tr>             
-                <tr><td class="wrapper spacer">&nbsp;</td></tr>                             
-                
-                <tr>
-                  <td align="center" class="content-block">
-                      <img src="https://s3-ap-southeast-2.amazonaws.com/edm-img/SUP0346/footer-logo.jpg"  alt="" style="" />
-                  </td>
-                </tr>
-              
-              
-                <tr><td class="wrapper spacer">&nbsp;</td></tr>
-
-                <tr>
-                  <td class="wrapper">
-                    <table border="0" cellpadding="0" cellspacing="0">
-                      
-                      <tr>
-                        <td align="center" valign="top" width="30%" class="templateColumnContainer">
-                              <table border="0" cellspacing="0" width="100%">
-                                <tr>
-                                    <td style="padding-top: 0px;" class="firstColumnContent">
-                                      <a href="mailto:programs@superfriend.com.au"><img height="13" width="153" src="http://h-t.com.au/email/superfriend/webinar0371/f-email.jpg" /></a>
-                                    </td>
-                                </tr>
-                                
-                            </table>
-                        </td>
-                        <td align="center" valign="top" width="15%" class="templateColumnContainer">
-                              <table border="0" cellspacing="0" width="100%">
-                                <tr>
-                                    <td style="padding-top: 0px;" class="secondColumnContent">
-                                      <img height="13" width="88" src="http://h-t.com.au/email/superfriend/webinar0371/f-phone.jpg" /> 
-                                    </td>
-                                </tr>
-                                
-                            </table>
-                        </td>
-                        <td align="center" valign="top" width="37%" class="templateColumnContainer">
-                              <table border="0" cellspacing="0" width="100%">
-                                <tr>
-                                    <td style="padding-top: 0px;" class="secondColumnContent">
-                                      <img height="13" width="268" src="http://h-t.com.au/email/superfriend/webinar0371/f-address.jpg" /> 
-                                    </td>
-                                </tr>
-                            </table>
-                        </td>
-                      </tr>
-                    </table>
-                  </td>
-                </tr>
-                
-                <tr><td class="wrapper spacer">&nbsp;</td></tr>
-                <tr><td style="height: 1px; background-color: #1c5692;"></td></tr>
-                <tr><td class="wrapper spacer">&nbsp;</td></tr>
+    img.desktop { display: block; }
+    img.mobile, table.mobile { display: none !important; }
     
+    div.desktop { display: block; }
+    div.mobile { 
+      display: none !important; 
+      max-height: 0px; 
+      font-size: 0px; 
+      overflow: hidden; 
+      mso-hide: all;
+    }
+
+    sup, sub {
+      vertical-align: baseline;
+      position: relative;
+      top: -0.4em;
+      font-size: smaller !important;
+    }
+    sub { 
+      top: 0.4em; 
+    }
+
+    table.mobile-table {
+      display: none !important;
+    }
+
+
+    div#cta-div {
+      background-color: #cd181c;
+      height: 32px;
+      width: 170px;
+      color: white;
+      font-size: 14px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    #mobile-cta-container  {
+      display: none !important; 
+      font-size: 0 !important; 
+      max-height: 0 !important; 
+      line-height: 0 !important; 
+      padding: 0 !important; 
+      mso-hide: all !important;
+    }
+
+    #cta-div-mobile { 
+      display: none !important; 
+      font-size: 0 !important; 
+      max-height: 0 !important; 
+      line-height: 0 !important; 
+      padding: 0 !important; 
+      mso-hide: all !important;
+    }
+
+
+  </style>
+
+<!--[if mso]>
+<style>
+.copy {
+  font-family: Helvetica, Arial, sans-serif !important;
+  font:
+}
+</style>
+<![endif]-->
+
+</head>
+<body>
+  <table width="100%" border="0" cellpadding="0" cellspacing="0">
+    <tr>
+      <td align="center" valign="top" bgcolor="#f6f6f6">
+        <table width="600" border="0" cellpadding="0" cellspacing="0" class="mobile-shell">
+          <tr>
+            <td class="td"  width="100%" align="center" valign="top">
+
+              <table width="100%" border="0" cellpadding="0" cellspacing="0">
                 <tr>
-                  <td class="wrapper">
-                    <table border="0" cellpadding="0" cellspacing="0">
-                      
+                  <td width="100%" align="left" valign="top" bgcolor="#FFFFFF">
+
+                    <!-- HEADER IMAGE -->
+                    <table width="100%" border="0" cellpadding="0" cellspacing="0">
                       <tr>
-                        <td align="center" valign="top" width="25%" class="templateColumnContainer">
-                              <table border="0" cellspacing="0" width="100%">
-                                <tr>
-                                    <td style="padding-top: 0px;" class="firstColumnContent">
-                                      <a target="_blank" href="https://twitter.com/SuperFriendMHF"><img src="https://s3-ap-southeast-2.amazonaws.com/edm-img/SUP0346/f-twitter.jpg" /></a>
-                                    </td>
-                                </tr>
-                                
-                            </table>
-                        </td>
-                        <td align="center" valign="top" width="25%" class="templateColumnContainer">
-                              <table border="0" cellspacing="0" width="100%">
-                                <tr>
-                                    <td style="padding-top: 0px;" class="secondColumnContent">
-                                      <a target="_blank" href="https://www.facebook.com/SuperFriendMHF"><img src="https://s3-ap-southeast-2.amazonaws.com/edm-img/SUP0346/f-facebook.jpg" /></a>
-                                    </td>
-                                </tr>
-                                
-                            </table>
-                        </td>
-                        <td align="center" valign="top" width="35%" class="templateColumnContainer">
-                              <table border="0" cellspacing="0" width="100%">
-                                <tr>
-                                    <td style="padding-top: 0px;" class="secondColumnContent">
-                                      <a target="_blank" href="https://linkedin.com/company/superfriend"><img src="https://s3-ap-southeast-2.amazonaws.com/edm-img/SUP0346/f-linkedin.jpg" /></a>
-                                    </td>
-                                </tr>
-                            </table>
+                        <td width="100%" align="left" valign="top">
+                          <img width="600" height="246" style="width: 600px; height:246px;" src="http://h-t.com.au/email/veeva/oamg0049/header.jpg" alt="header">
                         </td>
                       </tr>
                     </table>
-                  </td>
-                </tr>
+
+                    <!-- INTRO COPY -->
+                    <table width="100%" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <!-- LEFY COLUMN SPACER -->
+                        <td class="content-spacing" align="center" width="40" style="width:40px;"></td>
+                        <!-- MAIN CONTENT -->
+                        <td>
+                          <table border="0" cellpadding="0" cellspacing="0">
+                            
+                            <tr><td class="copy" style="color: #000000; font-size: 13px; line-height: 17px;">Dear {{accFname}} {{accLname}},</td></tr>
+                            <tr><td><table height="25" cellpadding="0" cellspacing="0"><tr><td>&nbsp;</td></tr></table></td></tr>
+                            <tr><td class="copy" style="color: #000000; font-size: 13px; line-height: 17px;">{{customText(255)}}</td></tr>
+                            <tr><td><table height="25" cellpadding="0" cellspacing="0"><tr><td>&nbsp;</td></tr></table></td></tr>
+
+                            <!-- SPACER TABLE ROW-->
+                          </table>
+                        </td>
+                       <!-- RIGHT COLUMN SPACER -->
+                        <td class="content-spacing" align="center" width="40" style="width:40px;"></td>
+                      </tr>
+                    </table>
+                    <!-- END INTRO COPY -->
 
 
-                <tr><td class="wrapper spacer">&nbsp;</td></tr>
+                    <!-- PURPLE BOX COPY -->
+                    <table width="100%" cellpadding="0" cellspacing="0" >
+                      <tr>
+                        <!-- LEFY COLUMN SPACER -->
+                        <td class="content-spacing" align="center" width="30" style="width:30px;"></td>
+                        <!-- MAIN CONTENT -->
+                        <td>
+                          <table border="0" cellpadding="0" cellspacing="0">
+                            <tr><td class="copy" style="background-color: #840f53;color: #ffffff; font-size: 14px; line-height: 18px; padding:10px;"><strong>NOW APPROVED:</strong> KYPROLIS<sup>&reg;</sup>, as part of combination therapy with dexamethasone or lenalidomide and dexamethasone, is indicated for the treatment of patients with relapsed or refractory multiple myeloma who have received at least one prior therapy.<sup>1</sup></td></tr>
+                          </table>
+                        </td>
+                       <!-- RIGHT COLUMN SPACER -->
+                        <td class="content-spacing" align="center" width="30" style="width:30px"></td>
+                      </tr>
+                    </table>
+                    <!-- END PURPLE BOX COPY -->
 
-                <tr>
-                  <td class="content-block" style="padding-top: 20px;">
-                    <a target="_blank" href="http://superfriend.com.au"><img src="https://s3-ap-southeast-2.amazonaws.com/edm-img/SUP0346/f-logo.jpg" /></a>
-                  </td>
-                </tr>
+                    <!-- SPACER TABLE -->
+                    <table width="100%" cellpadding="0" cellspacing="0">
+                      <tr><td><table height="25" cellpadding="0" cellspacing="0"><tr><td>&nbsp;</td></tr></table></td></tr>
+                    </table>
+                    <!-- END SPACER TABLE -->
 
-                <tr><td class="wrapper spacer">&nbsp;</td></tr>
-                <tr><td class="wrapper spacer">&nbsp;</td></tr>
-                
+                    <!-- INTRO COPY -->
+                    <table width="100%" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <!-- LEFY COLUMN SPACER -->
+                        <td class="content-spacing" align="center" width="40" style="width:40px;"></td>
+                        <!-- MAIN CONTENT -->
+                        <td>
+                          <table border="0" cellpadding="0" cellspacing="0">
+                            
+                            <tr><td class="copy" style="color: #000000; font-size: 14px; line-height: 18px;">
 
-              </table>
-            </div>
+                              <span style="color:#ec6e22; font-weight: bold;">In the Phase 3, head-to-head study</span> with KYPROLIS<sup>&reg;</sup> and dexamethasone (Kd) vs bortezomib and dexamethasone (Vd) for patients with relapsed or refractory multiple myeloma (ENDEAVOR), Kd:
+                                                            <!-- SPACER TABLE -->
+                              <table width="100%" cellpadding="0" cellspacing="0">
+                                <tr><td><table height="10" cellpadding="0" cellspacing="0"><tr><td style="font-size: 10px; line-height: 10px;">&nbsp;</td></tr></table></td></tr>
+                              </table>
+                              <!-- END SPACER TABLE -->
 
-            <!-- END FOOTER -->
-            
-<!-- END CENTERED WHITE CONTAINER --></div>
+                            </td></tr>
+                            <tr>
+                              <td>
+                                 <table width="100%" cellpadding="0" cellspacing="0">
+                                  <tr>
+                                    <td class="content-spacing" align="center" width="10" style="width:10px;"></td>
+                                    <td>
+                                      <table width="100%" cellpadding="0" cellspacing="0">
+                                        <tr>
+                                          <td style="line-height: 16px;"> 
+                                            <ul>
+                                              <li class="copy" style="color: #ec6e22;">
+                                                
+                                                <span style="color: #ec6e22; font-weight: bold;">Doubled</span> <span style="color: #000000;">the median</span> <span style="color: #ec6e22; font-weight: bold;">progression-free survival<sup style="font-size: 10px !important; top: -0.6em;">*</sup></span><span style="color: #000000;"> vs Vd<br/> (18.7 vs 9.4 months; p&lt;0.0001)<sup style="font-size: 10px !important; top: -0.6em;">1,2</sup></span>
+
+                                                <span style="font-size: 10px; color: #000000;"><br/><sup>*</sup>Primary endpoint of ENDEAVOR study. Progression-free survival was assessed by an independent review committee.<sup>2</sup></span>
+
+                                              </li>
+                                              <li class="copy" style="color: #ec6e22;">
+                                                
+                                                <span style="color: #ec6e22; font-weight: bold;">Doubled</span> <span style="color: #000000;">the number of patients achieving a</span> <span style="color: #ec6e22; font-weight: bold;">complete response<sup style="font-size: 10px !important; top: -0.6em;">*</sup></span> <span style="color: #000000;">or better vs Vd<br/> (13% vs 6%; descriptive p=0.001<sup style="font-size: 10px !important; top: -0.6em;">&dagger;</sup>)<sup style="font-size: 10px !important; top: -0.6em;">1,2</sup></span>
+
+                                                <span style="font-size: 10px;color:#000000;"><br/><sup>&dagger;</sup>Not a pre-specified secondary endpoint with statistical testing. P-value is for descriptive purposes only.<sup style="font-size: 8px;">2</sup></span>
+
+                                              </li>
+                                              <li class="copy" style="color: #ec6e22;">
+                                                
+                                                <span style="color: #000000;">Presented a favourable benefit&ndash;risk profile with</span> <span style="color: #ec6e22; font-weight: bold;">significantly less peripheral neuropathy</span> <span style="color: #000000;">vs Vd<br/>(Grade &ge;2<sup style="font-size: 10px !important; top: -0.6em;">&Dagger;</sup>, 6% vs 32%; p&lt;0.0001)<sup style="font-size: 10px !important; top: -0.6em;">1,2</sup></span>
+                                                
+                                                <span style="font-size: 10px; line-height:10px;color: #000000;"><br/><sup>&Dagger;</sup>Analysis of Grade 2 or higher peripheral neuropathy events is based on safety population.<br/>79% of patients in the bortezomib group received subcutaneous bortezomib throughout study treatment.<sup style="font-size: 8px;">2</sup></span>
+
+                                              </li>
+                                            </ul>
+                                          </td>
+                                        </tr>
+                                      </table>
+                                    </td>
+                                    <td class="content-spacing" align="center" width="8" style="width:8px;"></td>
+                                  </tr>
+                                </table>
+                              </td>
+                            </tr>
+                            
+                            <tr><td class="copy" style="color: #000000; font-size: 14px; line-height: 18px;">
+                              We hope that you find these Kd vs Vd results valuable and that you will consider using the Kd regimen in multiple myeloma patients who have received one prior therapy.
+                            </td></tr>
+                            
+                            <tr><td><table height="20" cellpadding="0" cellspacing="0"><tr><td>&nbsp;</td></tr></table></td></tr>
+                            
+                            <tr><td class="copy" style="color: #000000; font-size: 14px; line-height: 18px;">
+                              Sincerely,
+                            </td></tr>
+
+                            <tr><td><table height="20" cellpadding="0" cellspacing="0"><tr><td>&nbsp;</td></tr></table></td></tr>
+
+                            <tr>
+                              <td>
+                                <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                  <tr>
+                                    <td class="copy" style="color: #000000;">
+                                      <img width="120" height="30" style="width: 120px; height:30px;"" src="http://h-t.com.au/email/veeva/oamg0049/Amgen_black.png" />
+                                    </td>
+                                    <td class="copy" style="color: #000000; text-align: right;">
+                                      <img width="140" height="54" style="width: 140px; height: 54px;" src="http://h-t.com.au/email/veeva/oamg0049/kyprolis.gif" />
+                                    </td>
+                                  </tr>
+                                </table>
+                              </td>
+                            </tr>
+
+                            <tr><td><table height="20" cellpadding="0" cellspacing="0"><tr><td>&nbsp;</td></tr></table></td></tr>
+                            
+                            <tr><td class="copy" style="color: #6d6e71; font-size: 10px; line-height: 12px;">
+                              Kd regimen: administer KYPROLIS<sup>&reg;</sup> (56 mg/m2) as a 30-minute IV infusion on two consecutive days each week for 3 weeks (Days 1, 2, 8, 9, 15 and 16), followed by a 12-day rest period (Days 17 to 28). Each 28-day period is considered one treatment cycle. An initial dose (20 mg/m2) should be used for Days 1 and 2 to evaluate tolerability. Dexamethasone (20 mg) should be administered 30 minutes to 4 hours before KYPROLIS<sup>&reg;</sup> on Days 1, 2, 8, 9, 15, 16, 22 and 23 of each 28-day cycle. Treatment may be continued until disease progression or unacceptable toxicity occurs.<sup>1</sup>
+                            </td></tr>
+                            <tr><td><table height="7" cellpadding="0" cellspacing="0"><tr><td style="font-size: 7px; line-height: 7px;">&nbsp;</td></tr></table></td></tr>  
+
+                            <tr><td class="copy" style="color: #6d6e71; font-size: 10px; line-height: 12px;">
+                              <strong>References: 1.</strong> KYPROLIS<sup>&reg;</sup> (carfilzomib) Approved Product Information. Available at <a style="color: #6d6e71; text-decoration: none;" class="link" href="http://www.amgen.com.au/Kyprolis.PI">www.amgen.com.au/Kyprolis.PI</a>. <strong>2.</strong> Dimopoulos MA et al. Lancet Oncol 2016;17(1):27-38.
+                            </td></tr>
+                            <tr><td><table height="7" cellpadding="0" cellspacing="0"><tr><td style="font-size: 7px; line-height: 7px;">&nbsp;</td></tr></table></td></tr>
+
+                            <tr><td class="copy" style="color: #6d6e71; font-size: 10px; line-height: 12px;">
+                              ENDEAVOR was a randomised, Phase 3, head-to-head, open-label, multicentre study comparing KYPROLIS<sup>&reg;</sup> + dexamethasone vs bortezomib + dexamethasone in patients with relapsed or refractory multiple myeloma (n=929). Patients received their randomised study treatment in 28-day (Kd) or 21-day (Vd) cycles until disease progression, withdrawal of consent, or unacceptable toxicity. Primary endpoint was progression-free survival. Secondary endpoints included overall survival, overall response rate, duration of response, Grade &ge;2 peripheral neuropathy, and safety.<sup>1,2</sup>
+                            </td></tr>
+                            <tr><td><table height="7" cellpadding="0" cellspacing="0"><tr><td style="font-size: 7px; line-height: 7px;">&nbsp;</td></tr></table></td></tr>
+
+                            <tr><td class="copy" style="color: #6d6e71; font-size: 10px; line-height: 12px;">
+                              If you no longer wish to receive communications from Amgen, please <a style="color: #000000; text-decoration: none;" href="{{unsubscribe_product_link}}">click here</a> to unsubscribe.
+                            </td></tr>
+                            <tr><td class="copy" style="color: #6d6e71; font-size: 10px; line-height: 12px;">
+                              For more information about use, disclosure and access see our privacy policy at <a style="color: #6d6e71; text-decoration: none;" class="link" href="http://www.amgen.com.au">www.amgen.com.au</a>. This email was sent to {{Account.Amgen_Maintained_Email_Address_amg__c}} by Amgen Australia Pty Ltd. KYPROLIS<sup>&reg;</sup> is a registered trademark of Amgen. Amgen Australia, Level 7, 123 Epping Road, North Ryde, NSW 2113, ABN 31 051 057 428. <a style="color: #6d6e71; text-decoration: none;" class="link" href="http://www.amgen.com.au">www.amgen.com.au</a>. 
+                            </td></tr>
+                            <tr><td class="copy" style="color: #6d6e71; font-size: 10px; line-height: 12px;">                             
+                              Tel: +61 2 9870 1333. AUS5295. Prepared January 2017. OAMG0049
+                            </td></tr>
+                            <tr><td><table height="20" cellpadding="0" cellspacing="0"><tr><td>&nbsp;</td></tr></table></td></tr>
+                            <tr>
+                              <td class="copy" style="border-style: solid; border-color: #000000; border-width: 1px; text-align: center; font-size: 12px;padding:5px;">
+                                <strong>PBS information:</strong> This product is not listed on the PBS.
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+
+                       <!-- RIGHT COLUMN SPACER -->
+                        <td class="content-spacing" align="center" width="40" style="width:40px;"></td>
+                      </tr>
+                    </table>
+                    <!-- END INTRO COPY -->
+
+
+
+                    <!-- SPACER TABLE -->
+                    <table width="100%" cellpadding="0" cellspacing="0">
+                      <tr><td><table height="25" cellpadding="0" cellspacing="0"><tr><td>&nbsp;</td></tr></table></td></tr>
+                    </table>
+                    <!-- END SPACER TABLE -->
+                    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td class="copy" style="background-color: #840f53;color: #ffffff; font-size: 14px; line-height: 20px; padding:20px;text-align: center;">
+                          <strong>Please refer to product information before prescribing.<br/>Full product information is available at <a style="color: #ffffff; text-decoration: none;" href="http://www.amgen.com.au/Kyprolis.PI">www.amgen.com.au/Kyprolis.PI</a></strong> 
+                        </td>
+                      </tr>
+                    </table>
+
+
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
         </td>
-        <td>&nbsp;</td>
       </tr>
     </table>
   </body>
 </html>
 
+
+
+
+                      
