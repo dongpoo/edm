@@ -21,7 +21,8 @@
       table[class=body] td,
       table[class=body] span,
       table[class=body] a {
-        font-size: 120px !important; }
+        font-size: 12px !important; 
+        line-height: 14px !important;}
       table[class=body] .wrapper,
       table[class=body] .article {
         padding: 10px !important; }
@@ -110,7 +111,64 @@
                                         <tr>
                                           <td>
                                             <p style="font-family:sans-serif;font-size:16px; line-height: 20px; font-weight:normal;margin:0;margin-bottom:15px;color:#56565b;">Professor David Penson's Presentation</p>
-                                            <p style="font-family: 'Myriad Pro', Myriad, 'Liberation Sans', 'Nimbus Sans L', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:12px; line-height: 18px; font-weight:normal;margin:0;margin-bottom:15px;color:#56565b;">Dear Dr Smith,</p>      
+                                            <p style="font-family: 'Myriad Pro', Myriad, 'Liberation Sans', 'Nimbus Sans L', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:12px; line-height: 18px; font-weight:normal;margin:0;margin-bottom:15px;color:#56565b;">
+                                              <!-- TANIA -->
+                                              [IF:%Subscriber:CustomField6519%]
+
+                                                Dear %Subscriber:CustomField6519% %Subscriber:CustomField6521%,
+
+                                              [ENDIF] 
+
+                                              <!-- TANIA -->
+                                              [IF:%Subscriber:CustomField6512%]
+
+                                                Dear %Subscriber:CustomField6512% %Subscriber:CustomField6514%,
+
+                                              [ENDIF] 
+                                              
+                                              <!-- CHRIS -->
+                                              [IF:%Subscriber:CustomField6491%]
+
+                                                Dear %Subscriber:CustomField6491% %Subscriber:CustomField6493%,
+
+                                              [ENDIF] 
+
+                                              <!-- CRAIG -->
+                                              [IF:%Subscriber:CustomField6478%]
+
+                                                Dear %Subscriber:CustomField6478% %Subscriber:CustomField6480%,
+
+                                              [ENDIF] 
+
+                                              <!-- FIONA -->
+                                              [IF:%Subscriber:CustomField6498%]
+
+                                                Dear %Subscriber:CustomField6498% %Subscriber:CustomField6500%,
+
+                                              [ENDIF] 
+
+                                              <!-- KIMBERLY -->
+                                              [IF:%Subscriber:CustomField6505%]
+
+                                                Dear %Subscriber:CustomField6505% %Subscriber:CustomField6507%,
+
+                                              [ENDIF] 
+
+                                             <!-- CATHERINE -->
+                                                [IF:%Subscriber:CustomField6485%]
+
+                                                  Dear %Subscriber:CustomField6485% %Subscriber:CustomField6487%,
+
+                                                [ENDIF] 
+
+                                                <!-- DEMO -->
+                                                [IF:%Subscriber:CustomField6523%]
+
+                                                  Dear %Subscriber:CustomField6523% %Subscriber:CustomField6526%,
+
+                                                [ENDIF] 
+
+                                            </p>      
 
                                             <p style="font-family: 'Myriad Pro', Myriad, 'Liberation Sans', 'Nimbus Sans L', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:12px; line-height: 18px; font-weight:normal;margin:0;margin-bottom:15px;color:#56565b;">Thank you for your interest in Professor Penson's presentation.</p>
 
@@ -121,10 +179,10 @@
                                             <p style="font-family: 'Myriad Pro', Myriad, 'Liberation Sans', 'Nimbus Sans L', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:12px; line-height: 18px; font-weight:normal;margin:0;margin-bottom:10px;color:#56565b;"><a style="font-family: 'Myriad Pro', Myriad, 'Liberation Sans', 'Nimbus Sans L', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:12px; line-height: 18px; font-weight:normal;margin:0;margin-bottom:10px;text-decoration: none;" href="http://www.tolmar.com.au/congress.html" target="_blank">http://www.tolmar.com.au/congress.html</a></p> 
                                     
                                             <p style="font-family:sans-serif;font-size:8px;font-weight:normal;margin:0;margin-bottom:10px;color:#56565b;">&nbsp;</p>
-                                            <p style="font-family: 'Myriad Pro', Myriad, 'Liberation Sans', 'Nimbus Sans L', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:12px; line-height: 18px; font-weight:normal;margin:0;margin-bottom:15px;color:#56565b;">Please don't hesitate to call me on {{sender.mobile}} anytime with questions or to request materials.</p>
+                                            <p style="font-family: 'Myriad Pro', Myriad, 'Liberation Sans', 'Nimbus Sans L', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:12px; line-height: 18px; font-weight:normal;margin:0;margin-bottom:15px;color:#56565b;">Please don't hesitate to call me on %User:Mobile% anytime with questions or to request materials.</p>
                                             <p style="font-family: 'Myriad Pro', Myriad, 'Liberation Sans', 'Nimbus Sans L', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:12px; line-height: 18px; font-weight:normal;margin:0;margin-bottom:15px;color:#56565b;">I look forward to meeting up with you again soon.</p>
                                             <p style="font-family: 'Myriad Pro', Myriad, 'Liberation Sans', 'Nimbus Sans L', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:12px; line-height: 18px; font-weight:normal;margin:0;margin-bottom:15px;color:#56565b;">Yours sincerely,</p>
-                                            <p style="font-family: 'Myriad Pro', Myriad, 'Liberation Sans', 'Nimbus Sans L', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:12px; line-height: 18px; font-weight:normal;margin:0;margin-bottom:5px;color:#56565b;">{{sender.firstname}} {{sender.lastname}}</p>
+                                            <p style="font-family: 'Myriad Pro', Myriad, 'Liberation Sans', 'Nimbus Sans L', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:12px; line-height: 18px; font-weight:normal;margin:0;margin-bottom:5px;color:#56565b;">%User:FirstName% %User:LastName%</p>
                                             <p style="font-family: 'Myriad Pro', Myriad, 'Liberation Sans', 'Nimbus Sans L', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size:12px; line-height: 18px; font-weight:normal;margin:0;margin-bottom:15px;color:#56565b;">TOLMAR</p>
                                           </td>
                                         </tr>
@@ -183,25 +241,7 @@
               </tr>
               <!-- END MAIN CONTENT AREA -->
             </table>
-            <!-- START FOOTER -->
-           <!--  <div class="footer" style="clear:both;padding-top:10px;text-align:center;width:100%;">
-              <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:separate;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;">
-                <tr>
-                  <td class="content-block" style="font-family:sans-serif;font-size:14px;vertical-align:top;color:#999999;font-size:12px;text-align:center;">
-                    <span class="apple-link" style="color:#999999;font-size:12px;text-align:center;">Company Inc, 3 Abbey Road, San Francisco CA 94102</span>
-                    <br>
-                     Don't like these emails? <a href="http://i.imgur.com/CScmqnj.gif" style="color:#3498db;text-decoration:underline;color:#999999;font-size:12px;text-align:center;">Unsubscribe</a>.
-                  </td>
-                </tr>
-                <tr>
-                  <td class="content-block powered-by" style="font-family:sans-serif;font-size:14px;vertical-align:top;color:#999999;font-size:12px;text-align:center;">
-                    Powered by <a href="http://htmlemail.io" style="color:#3498db;text-decoration:underline;color:#999999;font-size:12px;text-align:center;text-decoration:none;">HTMLemail</a>.
-                  </td>
-                </tr>
-              </table>
-            </div> -->
-            <!-- END FOOTER -->
-            <!-- END CENTERED WHITE CONTAINER -->
+          
           </div>
         </td>
         <td style="font-family:sans-serif;font-size:14px;vertical-align:top;">&nbsp;</td>
