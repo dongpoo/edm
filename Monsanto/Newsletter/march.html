@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Simple Transactional Email</title>
+    <style type="text/css">
+    /* -------------------------------------
+        INLINED WITH https://putsmail.com/inliner
+    ------------------------------------- */
+    /* -------------------------------------
+        RESPONSIVE AND MOBILE FRIENDLY STYLES
+    ------------------------------------- */
+    @media only screen and (max-width: 620px) {
+      table[class=body] h1 {
+        font-size: 28px !important;
+        margin-bottom: 10px !important; }
+      table[class=body] p,
+      table[class=body] ul,
+      table[class=body] ol,
+      table[class=body] td,
+      table[class=body] span,
+      table[class=body] a {
+        font-size: 16px !important; }
+      table[class=body] .wrapper,
+      table[class=body] .article {
+        padding: 10px !important; }
+      table[class=body] .content {
+        padding: 0 !important; }
+      table[class=body] .container {
+        padding: 0 !important;
+        width: 100% !important; }
+      table[class=body] .main {
+        border-left-width: 0 !important;
+        border-radius: 0 !important;
+        border-right-width: 0 !important; }
+      table[class=body] .btn table {
+        width: 100% !important; }
+      table[class=body] .btn a {
+        width: 100% !important; }
+      table[class=body] .img-responsive {
+        height: auto !important;
+        max-width: 100% !important;
+        width: auto !important; }}
+    /* -------------------------------------
+        PRESERVE THESE STYLES IN THE HEAD
+    ------------------------------------- */
+    @media all {
+      .ExternalClass {
+        width: 100%; }
+      .ExternalClass,
+      .ExternalClass p,
+      .ExternalClass span,
+      .ExternalClass font,
+      .ExternalClass td,
+      .ExternalClass div {
+        line-height: 100%; }
+      .apple-link a {
+        color: inherit !important;
+        font-family: inherit !important;
+        font-size: inherit !important;
+        font-weight: inherit !important;
+        line-height: inherit !important;
+        text-decoration: none !important; }
+      .btn-primary table td:hover {
+        background-color: #34495e !important; }
+      .btn-primary a:hover {
+        background-color: #34495e !important;
+        border-color: #34495e !important; } }
+    </style>
+  </head>
+  <body class="" style="background-color:#f6f6f6;font-family: Calibri, helvetica, sans-serif;text-align:justify;-webkit-font-smoothing:antialiased;font-size:14px;line-height:1.4;margin:0;padding:0;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;">
+    <table border="0" cellpadding="0" cellspacing="0" class="body" style="border-collapse:separate;mso-table-lspace:0pt;mso-table-rspace:0pt;background-color:#ffffff;width:100%;">
+      <tr>
+        <td style="font-family: Calibri, helvetica, sans-serif;text-align:justify;font-size:14px;vertical-align:top;">&nbsp;</td>
+        <td class="container" style="font-family: Calibri, helvetica, sans-serif;text-align:justify;font-size:14px;vertical-align:top;display:block;max-width:700px;width:700px;margin:0 auto !important;">
+          <div class="content" style="box-sizing:border-box;display:block;margin:0 auto;max-width:700px;">
+            <!-- START CENTERED WHITE CONTAINER -->
+            <span class="preheader" style="color:transparent;display:none;height:0;max-height:0;max-width:0;opacity:0;overflow:hidden;mso-hide:all;visibility:hidden;width:0;">Over the last few months we've undergone significant progress with the roll-out of several Transformation initiatives, and we're pleased to bring you further details of two of them in this edition. Firstly, the implementation of the RADL Account Planning method in South Africa, including feedback from the Sales team in a series of short videos. Secondly, the deployment of DART 1.0, which is now live, and marks a new global milestone in the use of technology to optimize revenue for our customers and shareholders by standardizing the process for creation, approval and evaluation of our Market Funding programs.</span>
+            <table class="main" style="border-collapse:separate;mso-table-lspace:0pt;mso-table-rspace:0pt;background:#fff;border-radius:3px;width:100%;">
+              <!-- START MAIN CONTENT AREA -->
+              <tr>
+                <td class="wrapper" style="font-family: Calibri, helvetica, sans-serif;text-align:justify;font-size:14px;vertical-align:top;box-sizing:border-box;">
+                  <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:separate;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;">
+                    
+                    <!-- HEADER IMAGES -->
+                    <tr>
+                      <td>
+                        <img src="http://h-t.com.au/email/monsanto/march-newsletter/headera.jpg" alt="header image" width="700"/>
+                        <img src="http://h-t.com.au/email/monsanto/march-newsletter/header_bannera.png" alt="header banner" width="700"/>
+                      </td>
+                    </tr>
+                    <!-- END HEADER IMAGES -->
+
+                    <!-- EDITION ROW -->
+                    <tr>
+                      <td>
+                        <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:separate;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;background-color: #ffffff">
+                          <tr>
+                            <!-- <td style="font-family: Calibri, helvetica, sans-serif;text-align:justify;font-size:14px;vertical-align:top;width:30px;background:#ffffff;"></td> -->
+                            <td style="padding-top: 6px; padding-right: 30px;font-family: Calibri, helvetica, sans-serif;text-align:justify;font-size:22px;font-weight: bold; vertical-align:top;background:#9dbb67; color:white;text-align:right;">
+                              March 2017
+                            </td>
+                            <!-- <td style="font-family: Calibri, helvetica, sans-serif;text-align:justify;font-size:14px;vertical-align:top;width:30px;background:#ffffff;"></td>                             -->
+                          </tr>
+                          <tr>
+                            <!-- <td style="font-family: Calibri, helvetica, sans-serif;text-align:justify;font-size:14px;vertical-align:top;width:30px;background:#ffffff;"></td> -->
+                            <td style="padding-bottom: 6px; padding-right: 30px;font-family: Calibri, helvetica, sans-serif;text-align:justify;font-size:14px; vertical-align:top;background:#9dbb67; color:white;text-align:right; font-style: italic;">
+                              Company Confidential
+                            </td>
+                            <!-- <td style="font-family: Calibri, helvetica, sans-serif;text-align:justify;font-size:14px;vertical-align:top;width:30px;background:#ffffff;"></td> -->
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                    <!-- END EDITION ROW -->
+
+                    <!-- 25px SPACER -->
+                    <tr>
+                      <td>
+                        <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:separate;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;">
+                          <tr><td height="25" style="height: 25px; font-family: Calibri, helvetica, sans-serif;text-align:justify;font-size:25px;line-height:25px;vertical-align:top;width:30px;background:#ffffff;font-weight: bold;"></td></tr>
+                        </table>
+                      </td>
+                    </tr>
+                    <!-- END 25px SPACER -->
+
+                    <!-- INTRO CONTENT SECTION -->
+                    <tr>
+                      <td style="font-family: Calibri, helvetica, sans-serif;text-align:justify;font-size:14px;vertical-align:top; background-color: #f6e9c1; font-weight: bold;">
+                        <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:separate;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;background-color: #f6e9c1">
+                          <tr>
+                            <td style="font-family: Calibri, helvetica, sans-serif;text-align:justify;font-size:14px;vertical-align:top;width:30px;background:#f6e9c1;"></td>
+                            <td>
+                              <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:separate;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;">
+                                <tr>
+                                  <td>
+                                    <!-- FIRST CONTENT HEADER -->      
+                                    <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:separate;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;">
+                                      <tr><td height="30" style="height: 30px; font-family: Calibri, helvetica, sans-serif;text-align:justify;font-size:22px;vertical-align:top;width:30px;background:#f6e9c1;font-weight: bold;"></td></tr>
+                                    </table>
+                                    <!-- END FIRST CONTENT HEADER -->
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:separate;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;">
+                                      <tr>
+                                        <td style="padding-bottom: 10px; padding-right: 30px;font-family: Calibri, helvetica, sans-serif;text-align:justify;font-size:22px;font-weight: bold; vertical-align:top;background:#f6e9c1; color:#494949;">Introduction
+
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td>
+                                          <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:separate;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;">
+                                            <tr>
+                                              <td style="font-family: Calibri, helvetica, sans-serif;text-align:justify;font-size:14px;vertical-align:top;background:#f6e9c1;font-weight: normal; color:#494949;padding-right: 20px;border-right-color: #ffffff; border-right-style: solid; border-right-width: 1px;">
+                                                <p style="font-family: Calibri, helvetica, sans-serif;text-align:justify;font-size:14px;background:#f6e9c1;font-weight: normal; color:#494949;margin-top:0px;">Over the last few months we've undergone significant progress with the roll-out of several Transformation initiatives, and we're pleased to bring you further details of two of them in this edition. Firstly, the implementation of the RADL Account Planning method in South Africa, including feedback from the Sales team in a series of short videos. Secondly, the deployment of DART 1.0, which is now live, and marks a new global milestone in the use of technology to optimize revenue for our customers and shareholders by standardizing the process for creation, approval and evaluation of our Market Funding programs.</p>
+                                                <p style="font-family: Calibri, helvetica, sans-serif;font-size:14px;background:#f6e9c1;font-weight: normal; color:#494949;">We welcome your feedback and questions. Please contact Rebecca Sims at <a style="font-family: Calibri, helvetica, sans-serif;font-size:14px;background:#f6e9c1;font-weight: normal; color:#494949;" href="mailto:rebecca.sims@monsanto.com" target="_blank">rebecca.sims@monsanto.com</a>.</p>
+                                                <p style="font-family: Calibri, helvetica, sans-serif;font-size:14px;background:#f6e9c1;font-weight: normal; color:#494949;">Regards,<br/>Daniel</p> 
+                                              </td>
+
+                                              <td style="font-family: Calibri, helvetica, sans-serif;text-align:justify;font-size:14px;vertical-align:top;background:#f6e9c1;font-weight: normal; color:#494949;padding-left: 20px;">
+                                                <img src="http://h-t.com.au/email/monsanto/march-newsletter/daniel_taller.jpg" alt="first photo" width="200"/>
+                                              </td>
+                                            </tr>
+                                          </table>
+                                        </td>
+                                      </tr>
+                                    </table>  
+                                  </td>
+                                </tr>
+                                
+                                <tr>
+                                  <td>
+                                    <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:separate;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;">
+                                      <tr><td height="30" style="height: 30px; font-family: Calibri, helvetica, sans-serif;text-align:justify;font-size:22px;vertical-align:top;width:30px;background:#f6e9c1;font-weight: bold;"></td></tr>
+                                    </table>
+                                  </td>
+                                </tr>
+                                
+
+                              </table>  
+                            </td>
+                            <td style="font-family: Calibri, helvetica, sans-serif;text-align:justify;font-size:14px;vertical-align:top;width:30px;background:#f6e9c1;"></td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                    <!-- END INTRO CONTENT SECTION -->
+
+                    <!-- 2px SPACER -->
+                    <tr>
+                      <td>
+                        <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:separate;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;">
+                          <tr><td height="3" style="height: 3px; font-family: Calibri, helvetica, sans-serif;text-align:justify;font-size:3px;line-height:3px;vertical-align:top;width:30px;background:#ffffff;font-weight: bold;"></td></tr>
+                        </table>
+                      </td>
+                    </tr>
+                    <!-- END 2px SPACER -->
+
+                    <!-- LIST CONTENT SECTION -->
+                    <tr>
+                      <td style="font-family: Calibri, helvetica, sans-serif;text-align:justify;font-size:14px;vertical-align:top; background-color: #9dbb67; font-weight: bold;">
+                        <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:separate;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;background-color: #9dbb67">
+                          <tr>
+                            <!-- GUTTER -->      
+                            <td style="font-family: Calibri, helvetica, sans-serif;text-align:justify;font-size:14px;vertical-align:top;width:30px;background:#9dbb67;"></td>
+                            <!-- END GUTTER -->      
+
+                            <td>
+                              <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:separate;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;">
+                                <tr>
+                                  <td>
+                                    <!-- SECOND CONTENT HEADER -->      
+                                    <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:separate;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;">
+                                      <tr><td height="15" style="height: 15px; font-family: Calibri, helvetica, sans-serif;text-align:justify;font-size:22px;vertical-align:top;width:30px;background:#9dbb67;font-weight: bold;"></td></tr>
+                                      <tr>
+                                        <td style="font-family: Calibri, helvetica, sans-serif;text-align:justify;font-size:22px;vertical-align:top;background:#9dbb67;font-weight: bold; color:#ffffff;">Key Dates - March and April</td>
+                                      </tr>
+                                      <tr><td height="10" style="height: 10px; font-family: Calibri, helvetica, sans-serif;text-align:justify;font-size:22px;vertical-align:top;width:30px;background:#9dbb67;font-weight: bold; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: #ffffff;"></td></tr>
+                                    </table>
+                                    <!-- END SECOND CONTENT HEADER -->
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:separate;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;">
+                                      <tr><td height="15" style="height: 20px; font-family: Calibri, helvetica, sans-serif;text-align:justify;font-size:20px;vertical-align:top;background:#9dbb67;font-weight: bold;line-height:20px;"></td></tr>
+                                    </table>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td style="font-family: Calibri, helvetica, sans-serif;text-align:justify;font-size:14px;vertical-align:top;background:#9dbb67;font-weight: bold; color:#ffffff;">
+                                    <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:separate;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;">
+                                      <tr>
+                                        <td style="font-family: Calibri, helvetica, sans-serif;text-align:justify;font-size:14px;vertical-align:top;background:#9dbb67;font-weight: bold; color:#ffffff;">
+                                          Monday 20 March
+                                        </td>
+                                        <td style="font-family: Calibri, helvetica, sans-serif;text-align:justify;font-size:14px;vertical-align:top;background:#9dbb67; color:#ffffff;">
+                                          IBP - March
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td>
+                                          <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:separate;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;">
+                                            <tr><td height="10" style="height: 10px; font-family: Calibri, helvetica, sans-serif;text-align:justify;font-size:10px;vertical-align:top;background:#9dbb67;font-weight: bold;line-height:10px;"></td></tr>
+                                          </table>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td style="font-family: Calibri, helvetica, sans-serif;text-align:justify;font-size:14px;vertical-align:top;background:#9dbb67;font-weight: bold; color:#ffffff;">
+                                          Thursday 6 April
+                                        </td>
+                                        <td style="font-family: Calibri, helvetica, sans-serif;text-align:justify;font-size:14px;vertical-align:top;background:#9dbb67; color:#ffffff;">
+                                          Africa Commercial Transformation Update - April
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td>
+                                          <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:separate;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;">
+                                            <tr><td height="10" style="height: 10px; font-family: Calibri, helvetica, sans-serif;text-align:justify;font-size:10px;vertical-align:top;background:#9dbb67;font-weight: bold;line-height:10px;"></td></tr>
+                                          </table>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td style="font-family: Calibri, helvetica, sans-serif;text-align:justify;font-size:14px;vertical-align:top;background:#9dbb67;font-weight: bold; color:#ffffff;">
+                                          Wednesday 12 April
+                                        </td>
+                                        <td style="font-family: Calibri, helvetica, sans-serif;text-align:justify;font-size:14px;vertical-align:top;background:#9dbb67; color:#ffffff;">
+                                          Asia Africa Hub Town Hall
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td>
+                                          <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:separate;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;">
+                                            <tr><td height="10" style="height: 10px; font-family: Calibri, helvetica, sans-serif;text-align:justify;font-size:10px;vertical-align:top;background:#9dbb67;font-weight: bold;line-height:10px;"></td></tr>
+                                          </table>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td style="font-family: Calibri, helvetica, sans-serif;text-align:justify;font-size:14px;vertical-align:top;background:#9dbb67;font-weight: bold; color:#ffffff;">
+                                          Monday 17 April
+                                        </td>
+                                        <td style="font-family: Calibri, helvetica, sans-serif;text-align:justify;font-size:14px;vertical-align:top;background:#9dbb67; color:#ffffff;">
+                                          IBP - April
+                                        </td>
+                                      </tr>
+                                    </table>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:separate;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;">
+                                      <tr><td height="15" style="height: 20px; font-family: Calibri, helvetica, sans-serif;text-align:justify;font-size:20px;vertical-align:top;background:#9dbb67;font-weight: bold;line-height:20px;"></td></tr>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                            
+                            <!-- GUTTER -->      
+                            <td style="font-family: Calibri, helvetica, sans-serif;text-align:justify;font-size:14px;vertical-align:top;width:30px;background:#9dbb67;"></td>
+                            <!-- END GUTTER -->      
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                    <!-- END LIST CONTENT SECTION -->
+                    <!-- 2px SPACER -->
+                    <tr>
+                      <td>
+                        <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:separate;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;">
+                          <tr><td height="3" style="height: 3px; font-family: Calibri, helvetica, sans-serif;text-align:justify;font-size:3px;line-height:3px;vertical-align:top;width:30px;background:#ffffff;font-weight: bold;"></td></tr>
+                        </table>
+                      </td>
+                    </tr>
+                    <!-- END 2px SPACER -->
+                    <!-- LIST CONTENT SECTION -->
+                    <tr>
+                      <td style="font-family: Calibri, helvetica, sans-serif;text-align:justify;font-size:14px;vertical-align:top; background-color: #f6e9c1; font-weight: bold;">
+                        <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:separate;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;background-color: #f6e9c1">
+                          <tr>
+                            <!-- GUTTER -->      
+                            <td style="font-family: Calibri, helvetica, sans-serif;text-align:justify;font-size:14px;vertical-align:top;width:30px;background:#f6e9c1;"></td>
+                            <!-- END GUTTER -->      
+
+                            <td>
+                              <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:separate;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;">
+                                <tr>
+                                  <td>
+                                    <!-- SECOND CONTENT HEADER -->      
+                                    <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:separate;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;">
+                                      <tr><td height="15" style="height: 15px; font-family: Calibri, helvetica, sans-serif;text-align:justify;font-size:22px;vertical-align:top;width:30px;background:#f6e9c1;font-weight: bold;"></td></tr>
+                                      <tr><td style="font-family: Calibri, helvetica, sans-serif;text-align:justify;font-size:22px;vertical-align:top;background:#f6e9c1;font-weight: bold; color:#494949;">Useful Links</td></tr>
+                                      <tr><td height="10" style="height: 10px; font-family: Calibri, helvetica, sans-serif;text-align:justify;font-size:22px;vertical-align:top;width:30px;background:#f6e9c1;font-weight: bold; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: #494949;"></td></tr>
+                                    </table>
+                                    <!-- END SECOND CONTENT HEADER -->
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:separate;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;">
+                                      <tr><td height="15" style="height: 20px; font-family: Calibri, helvetica, sans-serif;text-align:justify;font-size:20px;vertical-align:top;background:#f6e9c1;font-weight: bold;line-height:20px;"></td></tr>
+                                    </table>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td style="font-family: Calibri, helvetica, sans-serif;text-align:justify;font-size:14px;vertical-align:top;background:#f6e9c1;font-weight: bold; color:#494949;">
+                                    <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:separate;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;">
+                                      <tr>
+                                        <td style="font-family: Calibri, helvetica, sans-serif;text-align:justify;font-size:14px;vertical-align:top;background:#f6e9c1;font-weight: bold; color:#494949;padding-right: 15px;width:305px">
+                                          <span  style="font-family: Calibri, helvetica, sans-serif;text-align:justify;font-size:14px;vertical-align:top;background:#f6e9c1; color:#494949;"><a style="font-family: Calibri, helvetica, sans-serif;text-align:justify;font-size:14px;vertical-align:top;background:#f6e9c1; color:#494949;" href="https://monsanto.brightidea.com/IdeaCultivator2Q" target="_blank">Idea Cultivator</a></span><br/><span  style="font-family: Calibri, helvetica, sans-serif;text-align:justify;font-size:14px;vertical-align:top;background:#f6e9c1;font-weight: normal; color:#494949;">Got an innovative idea to improve the way we do business? You have the opportunity to transform and shape the future of our company. Visit the <a style="font-family: Calibri, helvetica, sans-serif;text-align:justify;font-size:14px;vertical-align:top;background:#f6e9c1; color:#494949;" href="https://monsanto.brightidea.com/IdeaCultivator2Q" target="_blank">Idea Cultivator</a> to submit your idea!</span>
+                                        </td>
+
+                                        <td style="font-family: Calibri, helvetica, sans-serif;text-align:justify;font-size:14px;vertical-align:top;background:#f6e9c1;font-weight: bold; color:#494949;width:1px;"></td>
+
+                                        <td style="font-family: Calibri, helvetica, sans-serif;text-align:justify;font-size:14px;vertical-align:top;background:#f6e9c1;font-weight: bold; color:#494949;padding-left: 15px;width:305px;">
+                                          <span  style="font-family: Calibri, helvetica, sans-serif;text-align:justify;font-size:14px;vertical-align:top;background:#f6e9c1;font-weight: bold; color:#494949;"><a style="font-family: Calibri, helvetica, sans-serif;text-align:justify;font-size:14px;vertical-align:top;background:#f6e9c1; color:#494949;" href="https://monsanto.northernlight.com/dashboard.php?id=1" target="_blank">FarmSight</a></span><br/><span style="font-family: Calibri, helvetica, sans-serif;text-align:justify;font-size:14px;vertical-align:top;background:#f6e9c1;font-weight: normal; color:#494949;">Not yet visited <a style="font-family: Calibri, helvetica, sans-serif;text-align:justify;font-size:14px;vertical-align:top;background:#f6e9c1; color:#494949;" href="https://monsanto.northernlight.com/dashboard.php?id=1" target="_blank">FarmSight</a>? You can access hundreds of up-to-date market insights and research reports from across the globe, right here at your fingertips!</span>
+                                        </td>
+                                      </tr>
+                                    </table>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:separate;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;">
+                                      <tr><td height="10" style="height: 10px; font-family: Calibri, helvetica, sans-serif;text-align:justify;font-size:10px;vertical-align:top;background:#f6e9c1;font-weight: bold;line-height:10px;"></td></tr>
+                                    </table>
+                                  </td>
+                                </tr>
+  
+                                <tr>
+                                  <td>
+                                    <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:separate;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;">
+                                      <tr><td height="15" style="height: 20px; font-family: Calibri, helvetica, sans-serif;text-align:justify;font-size:20px;vertical-align:top;background:#f6e9c1;font-weight: bold;line-height:20px;"></td></tr>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                            
+                            <!-- GUTTER -->      
+                            <td style="font-family: Calibri, helvetica, sans-serif;text-align:justify;font-size:14px;vertical-align:top;width:30px;background:#f6e9c1;"></td>
+                            <!-- END GUTTER -->      
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                    <!-- END LIST CONTENT SECTION -->
+
+
+
+                    <!-- 35px SPACER -->
+                    <tr>
+                      <td>
+                        <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:separate;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;">
+                          <tr><td height="25" style="height: 25px; font-family: Calibri, helvetica, sans-serif;text-align:justify;font-size:25px; line-height:25px; vertical-align:top;width:30px;background:#ffffff;font-weight: bold;"></td></tr>
+                        </table>
+                      </td>
+                    </tr>
+                    <!-- END 35px SPACER -->
+
+
+
+                    <!-- SPLIT ARTICLE CONTENT SECTION -->
+                    <tr>
+                      <td style="font-family: Calibri, helvetica, sans-serif;text-align:justify;font-size:14px;vertical-align:top; background-color: #ffffff; font-weight: bold;">
+                      
+                        <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:separate;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;background-color: #ffffff">
+                          <tr>
+                            <td>
+                              <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:separate;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;background-color: #9dbb67">
+                                <tr>
+                                  <td style="font-family: Calibri, helvetica, sans-serif;text-align:justify;font-size:14px;vertical-align:top;width:30px;background:#9dbb67;"></td>
+                                  <td>
+                                    <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:separate;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;background-color: #9dbb67">
+                                      <tr>
+                                        <!-- <td style="font-family: Calibri, helvetica, sans-serif;text-align:justify;font-size:14px;vertical-align:top;width:30px;background-color:#9dbb67;"></td> -->
+                                        <td style="padding-top: 15px; padding-bottom: 10px; padding-right: 30px;font-family: Calibri, helvetica, sans-serif;text-align:justify;font-size:22px;font-weight: bold; vertical-align:top;background:#9dbb67; color:white;">
+                                          COE Initiative Focus:<br/>Early Experience Team Account Planning roll-out in South Africa
+                                          <p style="font-family: Calibri, helvetica, sans-serif;text-align:justify;font-size:14px;font-weight: normal; vertical-align:top;background:#9dbb67; color:white;">By Hendrik Van Staden and Shariq Bukhari</p>
+                                        </td>
+                                      </tr>
+                                    </table>
+                                  </td>
+                                </tr>
+                                <tr> 
+                                  <td style="font-family: Calibri, helvetica, sans-serif;text-align:justify;font-size:14px;vertical-align:top;width:30px;background:#ffffff;"></td>
+                                  <td>
+                                    <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:separate;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;background-color: #ffffff">
+                                      <tr>
+                                        <td style="font-family: Calibri, helvetica, sans-serif;text-align:justify;font-size:14px;vertical-align:top;background:#ffffff;">
+                                          <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:separate;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;background-color: #ffffff">
+                                              <tr>
+                                                <td>
+                                                  <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:separate;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;">
+                                                    <tr><td height="15" style="height: 15px; font-family: Calibri, helvetica, sans-serif;text-align:justify;font-size:15px; line-height: 15px; vertical-align:top;width:30px;background:#ffffff;font-weight: bold;"></td></tr>
+                                                  </table>
+                                                </td>
+                                              </tr>
+                                              <tr>
+                                                <td>
+                                                  <p style="font-family: Calibri, helvetica, sans-serif;text-align:justify;font-size: 16px; font-weight: normal; color: #494949;">
+                                                    The South African Account Planning training meeting took place in January and was a huge success.
+                                                  </p>
+                                                  <p style="font-family: Calibri, helvetica, sans-serif;text-align:justify;font-size: 16px; font-weight: normal; color: #494949;">
+                                                    Some of the major objectives of the meeting included role clarity and responsibilities, setting out the importance of the RADL approach to customer interaction and prioritization, and highlighting how specific activities and customer touch points can create value based on market insights. The intelligence captured in this model will give the sales team the data and information needed to better understand our customers, prioritize their time more efficiently and plan differently. 
+                                                  </p>
+
+                                                  <p style="font-family: Calibri, helvetica, sans-serif;text-align:justify;font-size: 18px; font-weight: bold; color: #9dbb67;">Highlights:</p>
+
+                                                  <p style="font-family: Calibri, helvetica, sans-serif;text-align:justify;font-size: 16px; font-weight: normal; color: #494949;">
+                                                    <ul style="font-family: Calibri, helvetica, sans-serif;text-align:justify;font-size: 16px; font-weight: normal; color: #494949;">
+                                                        <li style="font-family: Calibri, helvetica, sans-serif;text-align:justify;font-size: 16px; font-weight: normal; color: #494949;">We looked at the business holistically, in conjunction with the TD, Customer Care and Marketing teams, to develop touchpoint programs and activities tied to the RADL model for the remainder of the calendar year 2017.</li>
+                                                        <li style="font-family: Calibri, helvetica, sans-serif;text-align:justify;font-size: 16px; font-weight: normal; color: #494949;">The SFE team also conducted an effective Change Management training session to enable the teams to better embrace the new Account Planning process.</li>
+                                                        <li style="font-family: Calibri, helvetica, sans-serif;text-align:justify;font-size: 16px; font-weight: normal; color: #494949;">Quarterly reviews, regular feedback loop sessions, and training are being scheduled with team managers and initiative champions on an ongoing basis throughout 2017.</li>
+                                                    </ul>
+                                                  </p>
+                                                  <p style="font-family: Calibri, helvetica, sans-serif;text-align:justify;font-size: 16px; font-weight: normal; color: #494949;">The RADL model introduces a consistent approach to account prioritization, not just for the Sales team within South Africa, but for the Sales teams within the five other Early Experience Teams (EETs) around the globe.</p>
+                                                </td>
+                                              </tr>
+                                              <tr>
+                                                <td>
+                                                  <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:separate;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;">
+                                                    <tr><td height="10" style="height: 10px; font-family: Calibri, helvetica, sans-serif;text-align:justify;font-size:10px; line-height: 10px; vertical-align:top;background:#ffffff;font-weight: bold;"></td></tr>
+                                                  </table>
+                                                </td>
+                                              </tr>
+                                              <tr>
+                                                <td style="text-align:center;">
+                                                  <div style="text-align: center;">
+                                                    <img style="width:350px;" width="350" src="http://h-t.com.au/email/monsanto/march-newsletter/radl.png" />
+                                                  </div>
+                                                </td>
+                                              </tr>
+                                              <tr>
+                                                <td>
+                                                  <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:separate;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;">
+                                                    <tr><td height="10" style="height: 10px; font-family: Calibri, helvetica, sans-serif;text-align:justify;font-size:10px; line-height: 10px; vertical-align:top;background:#ffffff;font-weight: bold;"></td></tr>
+                                                  </table>
+                                                </td>
+                                              </tr>
+                                              <tr>
+                                                <td>
+                                                  <p style="font-family: Calibri, helvetica, sans-serif;text-align:justify;font-size: 16px; font-weight: normal; color: #494949;">The insights and data gained by all the EETs can be more easily shared with other functions within the organization. Eventually these insights will be utilized to enable the Commercial business to roll out this model on a global scale.</p>
+                                                  <p style="font-family: Calibri, helvetica, sans-serif;text-align:justify;font-size: 16px; font-weight: normal; color: #494949;">Please take a few minutes to watch our videos, made by members of the South Africa Sales team, for their feedback on the RADL approach. For more information on the Account Planning initiative, please contact Shariq Bukhari: <a style="font-size: 16px; font-weight: normal; color: #494949;" href="mailto:shariq.bukhari@monsanto.com" target="_blank">shariq.bukhari@monsanto.com</p>
+                                                </td>
+                                              </tr>
+
+                                            </table>
+                                          </td>
+                                        </tr>
+                                      </table>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                            <!-- VERTICAL SPACERS -->
+                            <td style="background-color: #ffffff;width: 13px; border-right-width: 1px; border-right-color:#c8c8c8; border-right-style: solid;"></td>
+                            <td style="background-color: #ffffff;width: 13px;"></td>
+                            <!-- END VERTICAL SPACERS -->
+
+                            <!-- IMAGE COLUMN -->
+                            <td style="background-color: #ffffff; vertical-align: top;" valign="top">
+                              <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:separate;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;background-color: #ffffff">
+                                
+                                <tr> 
+                                  <td style="font-family: Calibri, helvetica, sans-serif;color: #494949;background-color: #ffffff; vertical-align: top; text-align: left;font-weight: bold; text-decoration: underline; font-size: 16px;" valign="top">
+                                    Video Links
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:separate;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;">
+                                      <tr><td height="10" style="height: 10px; font-family: Calibri, helvetica, sans-serif;text-align:justify;font-size:10px; line-height: 10px; vertical-align:top;background:#ffffff;font-weight: bold;"></td></tr>
+                                    </table>
+                                  </td>
+                                </tr>
+
+                                <tr>
+                                  <td>                                    
+                                    <img style="display:block;width:203px;" width="203" src="http://h-t.com.au/email/monsanto/march-newsletter/hendrick.jpg" />
+                                  </td>
+                                </tr>
+<!--                                 <tr>
+                                  <td>
+                                    <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:separate;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;">
+                                      <tr><td height="5" style="height: 5px; font-family: Calibri, helvetica, sans-serif;text-align:justify;font-size:5px; line-height: 5px; vertical-align:top;background:#ffffff;font-weight: bold;"></td></tr>
+                                    </table>
+                                  </td>
+                                </tr> -->
+                                <tr> 
+                                  <td style="font-family: Calibri, helvetica, sans-serif;color: #494949;background-color: #ffffff; vertical-align: top; text-align: left;font-weight: normal; font-size: 14px;" valign="top">
+                                    <a href="https://youtu.be/uq7hf-0DpYw" target="_blank" style="font-family: Calibri, helvetica, sans-serif;color: #494949;background-color: #ffffff; vertical-align: top; text-align: left;font-weight: normal; font-size: 14px;text-decoration: underline;">What is RADL Account Planning?</a><br/>Henrik van Staden, Sales Enablement Manager
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:separate;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;">
+                                      <tr><td height="15" style="height: 15px; font-family: Calibri, helvetica, sans-serif;text-align:justify;font-size:15px; line-height: 15px; vertical-align:top;background:#ffffff;font-weight: bold;"></td></tr>
+                                    </table>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>                                    
+                                    <img style="display:block;width:203px;" width="203" src="http://h-t.com.au/email/monsanto/march-newsletter/wilhelm.jpg" />
+                                  </td>
+                                </tr>
+<!--                                 <tr>
+                                  <td>
+                                    <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:separate;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;">
+                                      <tr><td height="5" style="height: 5px; font-family: Calibri, helvetica, sans-serif;text-align:justify;font-size:5px; line-height: 5px; vertical-align:top;background:#ffffff;font-weight: bold;"></td></tr>
+                                    </table>
+                                  </td>
+                                </tr> -->
+                                <tr> 
+                                  <td style="font-family: Calibri, helvetica, sans-serif;color: #494949;background-color: #ffffff; vertical-align: top; text-align: left;font-weight: normal; font-size: 14px;" valign="top">
+                                    <a href="https://youtu.be/Z18JPM9hC-w" target="_blank" style="font-family: Calibri, helvetica, sans-serif;color: #494949;background-color: #ffffff; vertical-align: top; text-align: left;font-weight: normal; font-size: 14px;text-decoration: underline;">Feedback from the Sales team:</a><br/>Wilhelm van Heerden, Sales Representative
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:separate;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;">
+                                      <tr><td height="15" style="height: 15px; font-family: Calibri, helvetica, sans-serif;text-align:justify;font-size:15px; line-height: 15px; vertical-align:top;background:#ffffff;font-weight: bold;"></td></tr>
+                                    </table>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td style="background-color: #ffffff; vertical-align: top;" valign="top">
+                                    <img style="display:block;width:203px;" width="203" src="http://h-t.com.au/email/monsanto/march-newsletter/coenie.jpg" />
+                                  </td>
+                                </tr>
+<!--                                 <tr>
+                                  <td>
+                                    <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:separate;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;">
+                                      <tr><td height="5" style="height: 5px; font-family: Calibri, helvetica, sans-serif;text-align:justify;font-size:5px; line-height: 5px; vertical-align:top;background:#ffffff;font-weight: bold;"></td></tr>
+                                    </table>
+                                  </td>
+                                </tr> -->
+                                <tr> 
+                                  <td style="font-family: Calibri, helvetica, sans-serif;color: #494949;background-color: #ffffff; vertical-align: top; text-align: left;font-weight: normal; font-size: 14px;" valign="top">
+                                    <a href="https://youtu.be/QXOTB-lIvkw" target="_blank" style="font-family: Calibri, helvetica, sans-serif;color: #494949;background-color: #ffffff; vertical-align: top; text-align: left;font-weight: normal; font-size: 14px;text-decoration: underline;">Feedback from the Sales team:</a><br/>Coenie Reichel, Sales Representative
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:separate;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;">
+                                      <tr><td height="15" style="height: 15px; font-family: Calibri, helvetica, sans-serif;text-align:justify;font-size:15px; line-height: 15px; vertical-align:top;background:#ffffff;font-weight: bold;"></td></tr>
+                                    </table>
+                                  </td>
+                                </tr>
+
+                                <tr>
+                                  <td>                                    
+                                    <img style="display:block;width:203px;" width="203" src="http://h-t.com.au/email/monsanto/march-newsletter/sam.jpg" />
+                                  </td>
+                                </tr>
+ <!--                                <tr>
+                                  <td>
+                                    <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:separate;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;">
+                                      <tr><td height="5" style="height: 5px; font-family: Calibri, helvetica, sans-serif;text-align:justify;font-size:5px; line-height: 5px; vertical-align:top;background:#ffffff;font-weight: bold;"></td></tr>
+                                    </table>
+                                  </td>
+                                </tr> -->
+                                <tr> 
+                                  <td style="font-family: Calibri, helvetica, sans-serif;color: #494949;background-color: #ffffff; vertical-align: top; text-align: left;font-weight: normal; font-size: 14px;" valign="top">
+                                    <a href="https://youtu.be/be1GzUzAWbc" target="_blank" style="font-family: Calibri, helvetica, sans-serif;color: #494949;background-color: #ffffff; vertical-align: top; text-align: left;font-weight: normal; font-size: 14px;text-decoration: underline;">Feedback from the Sales team:</a><br/>Sam Kramer, Sales Representative
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                            <!-- END IMAGE COLUMN -->
+
+                            <!-- RIGHT GUTTER MARGIN -->
+                            <td style="font-family: Calibri, helvetica, sans-serif;text-align:justify;font-size:14px;vertical-align:top;width:30px;background:#ffffff;"></td>
+
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                    <!-- SPLIT ARTICLE CONTENT SECTION -->
+
+                    <!-- SPACER ROW -->
+                    <tr>
+                      <td>
+                        <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:separate;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;">
+                          <tr><td height="30" style="height: 30px; font-family: Calibri, helvetica, sans-serif;text-align:justify;font-size:22px;vertical-align:top;width:30px;background:#ffffff;font-weight: bold;"></td></tr>
+                        </table>
+                      </td>
+                    </tr>
+                    <!-- END SPACER ROW -->
+
+                    <tr>
+                      <td>
+                        <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:separate;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;background-color: #e6eed9">
+                          <tr>
+                            <!-- LEFT GUTTER MARGIN -->
+                            <td style="font-family: Calibri, helvetica, sans-serif;text-align:justify;font-size:14px;vertical-align:top;width:30px;background:#e6eed9;"></td>
+
+                            <!-- CONTENT CELL -->
+                            <td>
+                              <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:separate;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;background-color: #e6eed9">
+                                <tr>
+                                  <td>
+                                    <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:separate;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;">
+                                      <tr><td height="15" style="height: 15px; font-family: Calibri, helvetica, sans-serif;text-align:justify;font-size:15px; line-height: 15px; vertical-align:top;width:30px;background:#e6eed9;font-weight: bold;"></td></tr>
+                                    </table>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+
+                                    <p style="font-family: Calibri, helvetica, sans-serif;text-align:justify;font-size:22px;font-weight: bold; vertical-align:top;background:#e6eed9; color:#494949;margin:0px;">COE Initiative Focus:<br/>
+                                    DART 1.0 (Revenue &amp; Product Optimization)</p>
+                                    <p style="font-family: Calibri, helvetica, sans-serif;text-align:justify;font-size: 14px; font-weight: normal; color: #494949;">By Tom Breen and Cornie Thiessen</p>
+
+                                    <p style="font-family: Calibri, helvetica, sans-serif;text-align:justify;font-size: 18px; font-weight: bold; color: #494949;">What is DART 1.0?</p>
+
+                                    <p style="font-family: Calibri, helvetica, sans-serif;text-align:justify;font-size: 16px; font-weight: normal; color: #494949;">DART 1.0 is the first version of the global discretionary and rebate tool developed to manage the write-up and approval of market funding programs. Over the coming months, every Hub will migrate to DART from their current market funding systems.</p>
+
+                                    <p style="font-family: Calibri, helvetica, sans-serif;text-align:justify;font-size: 18px; font-weight: bold; color: #494949;">What is initially being deployed?</p>
+
+                                    <p style="font-family: Calibri, helvetica, sans-serif;text-align:justify;font-size: 16px; font-weight: normal; color: #494949;">In this first deployment, we gain access to a global standard process and IT platform for the development and approval of our marketing programs.  All existing approval and program compliance features will migrate to DART 1.0 to preserve legal and compliance controls.</p>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:separate;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;">
+                                      <tr><td height="10" style="height: 10px; font-family: Calibri, helvetica, sans-serif;text-align:justify;font-size:10px; line-height: 10px; vertical-align:top;width:30px;background:#e6eed9;font-weight: bold;"></td></tr>
+                                    </table>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td style="text-align:center;">
+                                    <div style="text-align: center;">
+                                      <img style="width:350px;" width="350" src="http://h-t.com.au/email/monsanto/march-newsletter/graphica.png" />
+                                    </div>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:separate;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;">
+                                      <tr><td height="10" style="height: 10px; font-family: Calibri, helvetica, sans-serif;text-align:justify;font-size:10px; line-height: 10px; vertical-align:top;width:30px;background:#e6eed9;font-weight: bold;"></td></tr>
+                                    </table>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                   <p style="font-family: Calibri, helvetica, sans-serif;text-align:justify;font-size: 16px; font-weight: normal; color: #494949;">During November, several of our AA Hub Brand Managers were the first group in the world to be trained on DART and are now at the global forefront in putting the tool to use.  The Global Development team are currently in the process of retrospectively loading many of our FY17 YTD marketing programs into DART, and system access has been assigned to our Marketing Program stakeholders within the hub. </p>
+
+                                    <p style="font-family: Calibri, helvetica, sans-serif;text-align:justify;font-size: 16px; font-weight: normal; color: #494949;">RPO will be reaching out to marketing program developers over the next few weeks for a refresh on the write up and approval process so we can begin to capture all Q3 and Q4 programs in DART.  We eagerly await your feedback and welcome additional design ideas to improve the system.</p>
+
+                                    <p style="font-family: Calibri, helvetica, sans-serif;text-align:justify;font-size: 16px; font-weight: normal; color: #494949;">We would also like to recognise and thank Pieter Taljaard for representing our hub on the global design team.</p>                                                                                                            
+                                    
+                                    <p style="font-family: Calibri, helvetica, sans-serif;text-align:justify;font-size: 16px; font-weight: normal; color: #494949;">For more information on the DART 1.0 initiative, please contact Tom Breen at <a style="font-size: 16px; font-weight: normal; color: #494949;" href="mailto:thomas.breen@monsanto.com" target="_blank">thomas.breen@monsanto.com</a></p>
+
+                                  </td>
+                                </tr>
+                                
+                                <!-- SPACER ROW -->
+                                <tr>
+                                  <td>
+                                    <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:separate;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;">
+                                      <tr><td height="30" style="height: 30px; font-family: Calibri, helvetica, sans-serif;text-align:justify;font-size:22px;vertical-align:top;width:30px;background:#e6eed9;font-weight: bold;"></td></tr>
+                                    </table>
+                                  </td>
+                                </tr>
+                                <!-- END SPACER ROW -->
+
+                              </table>
+                            </td>
+                            <!-- END CONTENT CELL -->
+
+
+                            <!-- RIGHT GUTTER MARGIN -->
+                            <td style="font-family: Calibri, helvetica, sans-serif;text-align:justify;font-size:14px;vertical-align:top;width:30px;background:#e6eed9;"></td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+
+                    <!-- SPACER ROW -->                                
+                    <tr>
+                      <td>
+                        <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:separate;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;">
+                          <tr><td height="3" style="height: 3px; font-family: Calibri, helvetica, sans-serif;text-align:justify;font-size:3px;line-height:3px;vertical-align:top;width:3px;background:#ffffff;font-weight: bold;"></td></tr>
+                        </table>
+                      </td>
+                    </tr>
+                    <!-- END SPACER ROW -->
+
+                                
+                  </table>
+                </td>
+              </tr>
+              <!-- END MAIN CONTENT AREA -->
+            </table>
+
+            <!-- START FOOTER -->
+            <div class="footer" style="clear:both;padding-top:10px;text-align:center;width:100%;">
+              <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:separate;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;">
+                <!-- SPACER ROW -->                                
+                <tr>
+                  <td>
+                    <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:separate;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;">
+                      <tr><td height="10" style="height: 10px; font-family: Calibri, helvetica, sans-serif;text-align:justify;font-size:10px;line-height:10px;vertical-align:top;width:10px;background:#ffffff;font-weight: bold;"></td></tr>
+                    </table>
+                  </td>
+                </tr>
+                <!-- END SPACER ROW -->
+                <tr>
+                  <td style="text-align: center;">
+                   <img width="200" style="width:200px;" src="http://h-t.com.au/email/monsanto/march-newsletter/logo.png" alt="logo"/>
+                  </td> 
+                </tr>
+                <!-- SPACER ROW -->                                
+                <tr>
+                  <td>
+                    <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:separate;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;">
+                      <tr><td height="10" style="height: 10px; font-family: Calibri, helvetica, sans-serif;text-align:justify;font-size:10px;line-height:10px;vertical-align:top;width:10px;background:#ffffff;font-weight: bold;"></td></tr>
+                    </table>
+                  </td>
+                </tr>
+                <!-- END SPACER ROW -->
+
+                <tr>
+                  <td class="content-block" style="font-family: Calibri, helvetica, sans-serif;text-align:justify;font-size:14px;vertical-align:top;color:#999999;font-size:14px;text-align:center;">
+                    <span class="apple-link" style="color:#999999;font-size:14px;text-align:center;">
+                      This email was sent by Monsanto Australia, ABN 86 006 725 560, 12/600 St Kilda Rd, Melbourne VIC 3004.<br/> Post: PO Box 6051, St Kilda Rd Central VIC 8008.
+                    </span>
+                    <br>
+                    <a href="#" style="color:#3498db;text-decoration:underline;color:#999999;font-size:14px;text-align:center;">Unsubscribe</a> from this list.
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:separate;mso-table-lspace:0pt;mso-table-rspace:0pt;width:100%;">
+                      <tr><td height="30" style="height: 30px; font-family: Calibri, helvetica, sans-serif;text-align:justify;font-size:22px;vertical-align:top;width:30px;background:#ffffff;font-weight: bold;"></td></tr>
+                    </table>
+                  </td>
+                </tr>
+                
+              </table>
+            </div>
+            <!-- END FOOTER -->
+            <!-- END CENTERED WHITE CONTAINER -->
+          </div>
+        </td>
+        <td style="font-family: Calibri, helvetica, sans-serif;text-align:justify;font-size:14px;vertical-align:top;">&nbsp;</td>
+      </tr>
+    </table>
+  </body>
+</html>
